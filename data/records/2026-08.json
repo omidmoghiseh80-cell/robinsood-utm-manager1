@@ -1,0 +1,42 @@
+[
+  {
+    "id": "UTM-260819-073455-97FF51FF",
+    "campaign": {
+      "id": "CMP-260819-073228-B8679789",
+      "displayName": "کمپین شهریور ماه 1405",
+      "value": "pro_jazb_shahrivar_1405"
+    },
+    "source": {
+      "id": "SRC-TELEGRAM",
+      "displayName": "Telegram",
+      "value": "telegram"
+    },
+    "medium": {
+      "id": "MED-REFERRAL",
+      "displayName": "Referral",
+      "value": "referral"
+    },
+    "creative": {
+      "id": "CR-260819-073428-9CBC6708",
+      "displayName": "بنر 100 میلیون جایزه رایگان",
+      "value": "banner_cr_260819_073428_9cbc6708_v1"
+    },
+    "audience": null,
+    "destinationUrl": "https://www.robinsood.com/Challenges",
+    "finalUrl": "https://www.robinsood.com/Challenges?utm_source=telegram&utm_medium=referral&utm_campaign=pro_jazb_shahrivar_1405&utm_content=banner_cr_260819_073428_9cbc6708_v1",
+    "placement": "",
+    "publishDate": "2026-08-19",
+    "notes": "",
+    "createdBy": {
+      "username": "owner",
+      "name": "مدیر اصلی",
+      "role": "owner"
+    },
+    "createdAt": "2026-08-19T07:34:55.231Z",
+    "status": "active",
+    "archivedAt": null,
+    "archivedBy": null,
+    "deletedAt": null,
+    "deletedBy": null
+  }
+]
