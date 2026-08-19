@@ -10,8 +10,8 @@
     "run_worker_first": ["/api/*"]
   },
   "vars": {
-    "GITHUB_OWNER": "CHANGE_ME",
-    "GITHUB_REPO": "CHANGE_ME",
+    "GITHUB_OWNER": "omidmoghiseh80",
+    "GITHUB_REPO": "robinsood-utm-manager1",
     "GITHUB_BRANCH": "main"
   },
   "secrets": {
