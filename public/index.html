@@ -3,123 +3,273 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#f5f6fb">
+  <meta name="theme-color" content="#0b1020">
   <meta name="robots" content="noindex,nofollow">
   <title>RobinSood UTM Manager</title>
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+  <div class="ui-ambient" aria-hidden="true">
+    <div class="ambient-orb orb-a"></div>
+    <div class="ambient-orb orb-b"></div>
+    <div class="ambient-grid"></div>
+    <svg class="ambient-svg" viewBox="0 0 1200 700" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="lineGradient" x1="0" x2="1">
+          <stop offset="0" stop-color="#8B5CF6" stop-opacity="0"/>
+          <stop offset=".52" stop-color="#8B5CF6" stop-opacity=".35"/>
+          <stop offset="1" stop-color="#38BDF8" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <path d="M-30,535 C200,430 260,610 475,500 C710,378 785,510 1230,330" fill="none" stroke="url(#lineGradient)" stroke-width="1.2"/>
+      <path d="M-20,590 C190,500 360,630 570,520 C775,413 910,505 1230,405" fill="none" stroke="url(#lineGradient)" stroke-width=".7" opacity=".55"/>
+    </svg>
+  </div>
+
   <div id="toasts" class="toasts"></div>
 
   <section id="setupScreen" class="auth-shell hidden">
-    <div class="auth-card setup-card">
-      <div class="brand">RS</div>
-      <h1>راه‌اندازی اولیه</h1>
-      <p class="muted">سه حساب داخلی پنل را تعریف کن. این مرحله فقط یک‌بار نمایش داده می‌شود.</p>
-
-      <label class="field">
-        <span>Bootstrap Secret</span>
-        <input id="bootstrapSecret" type="password" autocomplete="off" placeholder="رمز راه‌اندازی اولیه">
-      </label>
-
-      <div class="user-setup-block">
-        <h3>مدیر اصلی</h3>
-        <div class="grid three">
-          <label class="field"><span>نام نمایشی</span><input id="ownerName" value="مدیر اصلی"></label>
-          <label class="field"><span>نام کاربری</span><input id="ownerUsername" class="ltr" value="owner"></label>
-          <label class="field"><span>رمز عبور</span><input id="ownerPassword" type="password" autocomplete="new-password"></label>
+    <div class="auth-frame setup-frame">
+      <aside class="auth-visual">
+        <div class="visual-mark">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path d="M18 13h28a5 5 0 0 1 5 5v28a5 5 0 0 1-5 5H18a5 5 0 0 1-5-5V18a5 5 0 0 1 5-5Z" fill="none" stroke="currentColor" stroke-width="2.5"/>
+            <path d="M22 39 30 27l7 8 6-11" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="43" cy="24" r="3.4" fill="currentColor"/>
+          </svg>
         </div>
-      </div>
-
-      <div class="user-setup-block">
-        <h3>مسئول مارکتینگ</h3>
-        <div class="grid three">
-          <label class="field"><span>نام نمایشی</span><input id="marketingName" value="مسئول مارکتینگ"></label>
-          <label class="field"><span>نام کاربری</span><input id="marketingUsername" class="ltr" value="marketing"></label>
-          <label class="field"><span>رمز عبور</span><input id="marketingPassword" type="password" autocomplete="new-password"></label>
+        <div>
+          <span class="eyebrow">RobinSood Growth Infrastructure</span>
+          <h2>UTM Manager</h2>
+          <p>مرکز یکپارچه ساخت، ثبت و کنترل لینک‌های کمپین با ساختار استاندارد و تاریخچه قابل اتکا.</p>
         </div>
-      </div>
-
-      <div class="user-setup-block">
-        <h3>مسئول فنی</h3>
-        <div class="grid three">
-          <label class="field"><span>نام نمایشی</span><input id="technicalName" value="مسئول فنی"></label>
-          <label class="field"><span>نام کاربری</span><input id="technicalUsername" class="ltr" value="technical"></label>
-          <label class="field"><span>رمز عبور</span><input id="technicalPassword" type="password" autocomplete="new-password"></label>
+        <div class="visual-points">
+          <span><i></i> شناسه یکتا برای هر انتشار</span>
+          <span><i></i> تاریخچه بدون ویرایش</span>
+          <span><i></i> خروجی Excel و CSV</span>
         </div>
-      </div>
+      </aside>
 
-      <div class="notice">رمز هر کاربر حداقل ۱۰ کاراکتر باشد. بعد از راه‌اندازی، هر سه نفر فقط با نام کاربری و رمز همین پنل وارد می‌شوند.</div>
-      <button id="finishSetupBtn" class="btn primary wide large">ثبت سه حساب و شروع</button>
-      <p id="setupError" class="error hidden"></p>
+      <div class="auth-card setup-card">
+        <div class="auth-head">
+          <span class="step-badge">Initial Setup</span>
+          <h1>راه‌اندازی اولیه</h1>
+          <p class="muted">سه حساب داخلی پنل را تعریف کن. این مرحله فقط یک‌بار نمایش داده می‌شود.</p>
+        </div>
+
+        <label class="field featured-field">
+          <span>Bootstrap Secret</span>
+          <input id="bootstrapSecret" type="password" autocomplete="off" placeholder="رمز راه‌اندازی اولیه">
+        </label>
+
+        <div class="user-setup-grid">
+          <div class="user-setup-block">
+            <div class="user-setup-title">
+              <span class="role-icon owner-role">01</span>
+              <div><h3>مدیر اصلی</h3><p>دسترسی کامل به سیستم</p></div>
+            </div>
+            <label class="field"><span>نام نمایشی</span><input id="ownerName" value="مدیر اصلی"></label>
+            <label class="field"><span>نام کاربری</span><input id="ownerUsername" class="ltr" value="owner"></label>
+            <label class="field"><span>رمز عبور</span><input id="ownerPassword" type="password" autocomplete="new-password"></label>
+          </div>
+
+          <div class="user-setup-block">
+            <div class="user-setup-title">
+              <span class="role-icon">02</span>
+              <div><h3>مسئول مارکتینگ</h3><p>ساخت و مدیریت لینک‌ها</p></div>
+            </div>
+            <label class="field"><span>نام نمایشی</span><input id="marketingName" value="مسئول مارکتینگ"></label>
+            <label class="field"><span>نام کاربری</span><input id="marketingUsername" class="ltr" value="marketing"></label>
+            <label class="field"><span>رمز عبور</span><input id="marketingPassword" type="password" autocomplete="new-password"></label>
+          </div>
+
+          <div class="user-setup-block">
+            <div class="user-setup-title">
+              <span class="role-icon">03</span>
+              <div><h3>مسئول فنی</h3><p>دسترسی عملیاتی پنل</p></div>
+            </div>
+            <label class="field"><span>نام نمایشی</span><input id="technicalName" value="مسئول فنی"></label>
+            <label class="field"><span>نام کاربری</span><input id="technicalUsername" class="ltr" value="technical"></label>
+            <label class="field"><span>رمز عبور</span><input id="technicalPassword" type="password" autocomplete="new-password"></label>
+          </div>
+        </div>
+
+        <div class="notice">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 3.8 6.6v5.5c0 4.8 3.4 7.9 8.2 9.9 4.8-2 8.2-5.1 8.2-9.9V6.6L12 3Z" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m8.8 12.3 2 2 4.5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>رمز هر کاربر حداقل ۱۰ کاراکتر باشد. بعد از راه‌اندازی، هر سه نفر فقط با نام کاربری و رمز همین پنل وارد می‌شوند.</span>
+        </div>
+
+        <button id="finishSetupBtn" class="btn primary wide large">
+          <span>ثبت سه حساب و شروع</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <p id="setupError" class="error hidden"></p>
+      </div>
     </div>
   </section>
 
   <section id="loginScreen" class="auth-shell hidden">
-    <div class="auth-card">
-      <div class="brand">RS</div>
-      <h1>UTM Manager</h1>
-      <p class="muted">مدیریت لینک‌های کمپین رابین‌سود</p>
+    <div class="auth-frame login-frame">
+      <aside class="auth-visual login-visual">
+        <div class="visual-mark">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path d="M18 13h28a5 5 0 0 1 5 5v28a5 5 0 0 1-5 5H18a5 5 0 0 1-5-5V18a5 5 0 0 1 5-5Z" fill="none" stroke="currentColor" stroke-width="2.5"/>
+            <path d="M22 39 30 27l7 8 6-11" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="43" cy="24" r="3.4" fill="currentColor"/>
+          </svg>
+        </div>
+        <div>
+          <span class="eyebrow">RobinSood Marketing Operations</span>
+          <h2>هر لینک، یک داده قابل تحلیل.</h2>
+          <p>از ساخت UTM تا خروجی نهایی کمپین، همه‌چیز در یک محیط متمرکز و کنترل‌شده.</p>
+        </div>
+        <div class="visual-mini-chart" aria-hidden="true">
+          <span style="--h:42%"></span><span style="--h:58%"></span><span style="--h:47%"></span><span style="--h:73%"></span><span style="--h:62%"></span><span style="--h:88%"></span><span style="--h:76%"></span>
+        </div>
+      </aside>
 
-      <label class="field">
-        <span>نام کاربری</span>
-        <input id="usernameInput" class="ltr" autocomplete="username">
-      </label>
+      <div class="auth-card login-card">
+        <div class="auth-head">
+          <span class="step-badge">Secure Access</span>
+          <h1>ورود به UTM Manager</h1>
+          <p class="muted">برای ادامه، اطلاعات حساب داخلی خودت را وارد کن.</p>
+        </div>
 
-      <label class="field" style="margin-top:14px">
-        <span>رمز عبور</span>
-        <input id="passwordInput" type="password" autocomplete="current-password">
-      </label>
+        <label class="field icon-field">
+          <span>نام کاربری</span>
+          <div class="input-shell">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.3" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M5.5 19c.6-3.7 2.8-5.6 6.5-5.6s5.9 1.9 6.5 5.6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            <input id="usernameInput" class="ltr" autocomplete="username" placeholder="username">
+          </div>
+        </label>
 
-      <label class="check">
-        <input id="rememberSession" type="checkbox">
-        <span>روی همین دستگاه وارد بمان</span>
-      </label>
+        <label class="field icon-field">
+          <span>رمز عبور</span>
+          <div class="input-shell">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2.3" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.5 10V7.5a3.5 3.5 0 0 1 7 0V10" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
+            <input id="passwordInput" type="password" autocomplete="current-password" placeholder="••••••••••">
+          </div>
+        </label>
 
-      <button id="loginBtn" class="btn primary wide">ورود به پنل</button>
-      <p id="loginError" class="error hidden"></p>
+        <label class="check">
+          <input id="rememberSession" type="checkbox">
+          <span>روی همین دستگاه وارد بمان</span>
+        </label>
+
+        <button id="loginBtn" class="btn primary wide large">
+          <span>ورود به پنل</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <p id="loginError" class="error hidden"></p>
+
+        <div class="auth-foot">
+          <span class="secure-dot"></span>
+          <span>اتصال امن به زیرساخت مدیریت کمپین رابین‌سود</span>
+        </div>
+      </div>
     </div>
   </section>
 
   <div id="app" class="app hidden">
     <aside id="sidebar" class="sidebar">
       <div class="side-brand">
-        <div class="brand mini">RS</div>
-        <div><b>UTM Manager</b><span>RobinSood</span></div>
+        <div class="brand mini">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path d="M19 14h26a5 5 0 0 1 5 5v26a5 5 0 0 1-5 5H19a5 5 0 0 1-5-5V19a5 5 0 0 1 5-5Z" fill="none" stroke="currentColor" stroke-width="3"/>
+            <path d="M23 39 30 28l7 7 5-10" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div><b>UTM Manager</b><span>RobinSood Growth Stack</span></div>
       </div>
 
+      <div class="workspace-label">WORKSPACE</div>
       <nav>
-        <button class="nav active" data-view="create">＋ ساخت UTM</button>
-        <button class="nav" data-view="history">◫ تاریخچه</button>
-        <button class="nav" data-view="definitions">⌘ تعاریف</button>
-        <button class="nav" data-view="exports">⇩ خروجی</button>
-        <button class="nav owner-only hidden" data-view="users">♙ کاربران</button>
+        <button class="nav active" data-view="create">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <span>ساخت UTM</span>
+        </button>
+        <button class="nav" data-view="history">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v14H5zM8 9h8M8 13h8M8 17h5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          <span>تاریخچه</span>
+        </button>
+        <button class="nav" data-view="definitions">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h10M7 12h10M7 20h10M4 4h.01M4 12h.01M4 20h.01" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <span>تعاریف</span>
+        </button>
+        <button class="nav" data-view="exports">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0 4-4m-4 4-4-4M5 19h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>خروجی</span>
+        </button>
+        <button class="nav owner-only hidden" data-view="users">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3.5 19c.6-3.4 2.4-5 5.5-5 2.2 0 3.8.8 4.7 2.5M17 8v6m-3-3h6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          <span>کاربران</span>
+        </button>
       </nav>
+
+      <div class="side-insight">
+        <div class="insight-orbit"><span></span></div>
+        <b>Data Integrity</b>
+        <p>هر UTM بعد از ثبت قفل می‌شود تا تاریخچه کمپین قابل اتکا بماند.</p>
+      </div>
 
       <div class="side-bottom">
         <div class="user-box">
           <div id="avatar" class="avatar">U</div>
           <div><b id="userName">—</b><span id="userRole">—</span></div>
+          <span class="online-dot" title="Online"></span>
         </div>
-        <button id="logoutBtn" class="btn ghost wide small">خروج</button>
+        <button id="logoutBtn" class="btn ghost wide small">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 5H5v14h5M14 8l4 4-4 4M18 12H9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>خروج</span>
+        </button>
       </div>
     </aside>
 
     <main>
       <header class="topbar">
-        <button id="menuBtn" class="icon mobile">☰</button>
+        <button id="menuBtn" class="icon mobile" aria-label="منو">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M5 12h14M5 17h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
         <div class="heading">
-          <h2 id="pageTitle">ساخت UTM</h2>
+          <div class="heading-row">
+            <h2 id="pageTitle">ساخت UTM</h2>
+            <span class="live-badge"><i></i> LIVE</span>
+          </div>
           <p id="pageSubtitle">لینک کمپین را استاندارد بساز و ذخیره کن.</p>
         </div>
-        <button id="refreshBtn" class="btn secondary">↻ بروزرسانی</button>
+        <div class="top-actions">
+          <div class="system-chip">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="12" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
+            <span>Campaign Ops</span>
+          </div>
+          <button id="refreshBtn" class="btn secondary refresh-btn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 8a7 7 0 1 0 1 6M19 4v4h-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>بروزرسانی</span>
+          </button>
+        </div>
       </header>
 
       <section id="view-create" class="view active">
+        <div class="section-intro">
+          <div>
+            <span class="section-kicker">LINK FACTORY</span>
+            <h3>ساخت لینک استاندارد کمپین</h3>
+          </div>
+          <div class="intro-meta">
+            <span><i class="meta-dot purple"></i> UTM Standardized</span>
+            <span><i class="meta-dot cyan"></i> Immutable Records</span>
+          </div>
+        </div>
+
         <div class="create-grid">
-          <div class="panel">
+          <div class="panel builder-panel">
             <div class="panel-head">
-              <div><h3>اطلاعات لینک</h3><p>قبل از ثبت، لینک نهایی را در ستون پیش‌نمایش بررسی کن.</p></div>
+              <div class="panel-title">
+                <span class="panel-icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                </span>
+                <div><h3>اطلاعات لینک</h3><p>پارامترها را انتخاب کن؛ لینک نهایی در لحظه ساخته می‌شود.</p></div>
+              </div>
               <span class="pill">UTM Builder</span>
             </div>
 
@@ -129,7 +279,7 @@
                   <span>کمپین <i>*</i></span>
                   <div class="select-add">
                     <select id="campaign" required></select>
-                    <button type="button" class="plus" data-add="campaigns">＋</button>
+                    <button type="button" class="plus" data-add="campaigns" aria-label="افزودن کمپین">＋</button>
                   </div>
                 </label>
 
@@ -137,7 +287,7 @@
                   <span>Source — محل انتشار <i>*</i></span>
                   <div class="select-add">
                     <select id="source" required></select>
-                    <button type="button" class="plus" data-add="sources">＋</button>
+                    <button type="button" class="plus" data-add="sources" aria-label="افزودن Source">＋</button>
                   </div>
                 </label>
 
@@ -145,7 +295,7 @@
                   <span>Medium — جنس تبلیغ <i>*</i></span>
                   <div class="select-add">
                     <select id="medium" required></select>
-                    <button type="button" class="plus" data-add="mediums">＋</button>
+                    <button type="button" class="plus" data-add="mediums" aria-label="افزودن Medium">＋</button>
                   </div>
                 </label>
 
@@ -153,7 +303,7 @@
                   <span>Creative <i>*</i></span>
                   <div class="select-add">
                     <select id="creative" required></select>
-                    <button type="button" class="plus" data-add="creatives">＋</button>
+                    <button type="button" class="plus" data-add="creatives" aria-label="افزودن Creative">＋</button>
                   </div>
                 </label>
 
@@ -161,19 +311,22 @@
                   <span>Audience / Term</span>
                   <div class="select-add">
                     <select id="audience"></select>
-                    <button type="button" class="plus" data-add="audiences">＋</button>
+                    <button type="button" class="plus" data-add="audiences" aria-label="افزودن Audience">＋</button>
                   </div>
                 </label>
 
-                <label class="field">
+                <label class="field date-field">
                   <span>تاریخ انتشار</span>
                   <input id="publishDate" type="date">
                 </label>
               </div>
 
-              <label class="field">
+              <label class="field url-field">
                 <span>Destination URL <i>*</i></span>
-                <input id="destination" type="url" required placeholder="https://www.robinsood.com/...">
+                <div class="input-shell">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l2.3-2.3A4 4 0 0 0 12.3 6L11 7.3M14 10a4 4 0 0 0-5.7 0L6 12.3A4 4 0 0 0 11.7 18l1.3-1.3" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+                  <input id="destination" type="url" required placeholder="https://www.robinsood.com/...">
+                </div>
               </label>
 
               <div class="grid two">
@@ -188,18 +341,31 @@
               </div>
 
               <div class="warning">
-                <b>بعد از ثبت، UTM قابل ویرایش نیست.</b>
-                <span>اگر اشتباه باشد، رکورد قبلی Archive و لینک جدید ساخته می‌شود.</span>
+                <div class="warning-icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 3.8 6.6v5.5c0 4.8 3.4 7.9 8.2 9.9 4.8-2 8.2-5.1 8.2-9.9V6.6L12 3Z" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 8v5m0 3h.01" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>
+                </div>
+                <div><b>بعد از ثبت، UTM قابل ویرایش نیست.</b><span>اگر اشتباه باشد، رکورد قبلی Archive و لینک جدید ساخته می‌شود.</span></div>
               </div>
 
-              <button class="btn primary wide large" type="submit">ثبت و ساخت لینک UTM</button>
+              <button class="btn primary wide large submit-utm" type="submit">
+                <span>ثبت و ساخت لینک UTM</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
             </form>
           </div>
 
-          <aside class="panel preview">
+          <aside class="panel preview premium-preview">
+            <div class="preview-glow"></div>
             <div class="panel-head compact">
-              <div><h3>پیش‌نمایش</h3><p>مقادیر نهایی لینک</p></div>
+              <div class="panel-title">
+                <span class="panel-icon dark-icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 12h10M13 8l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <div><h3>پیش‌نمایش لینک</h3><p>مقادیر نهایی UTM</p></div>
+              </div>
+              <span class="preview-status"><i></i> Auto</span>
             </div>
+
             <div class="kv">
               <div><span>Campaign</span><b id="pvCampaign">—</b></div>
               <div><span>Source</span><b id="pvSource">—</b></div>
@@ -207,24 +373,45 @@
               <div><span>Content</span><b id="pvContent">—</b></div>
               <div><span>Term</span><b id="pvTerm">—</b></div>
             </div>
+
             <div class="url-box">
-              <span>Final URL</span>
+              <div class="url-head"><span>FINAL URL</span><i></i></div>
               <code id="pvUrl">لینک مقصد را وارد کنید...</code>
             </div>
-            <button id="copyPreview" class="btn secondary wide" type="button">کپی لینک پیش‌نمایش</button>
+
+            <button id="copyPreview" class="btn preview-copy wide" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="11" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+              <span>کپی لینک پیش‌نمایش</span>
+            </button>
           </aside>
         </div>
       </section>
 
       <section id="view-history" class="view">
-        <div class="panel">
+        <div class="section-intro">
+          <div><span class="section-kicker">AUDIT TRAIL</span><h3>تاریخچه لینک‌ها</h3></div>
+          <div class="intro-meta"><span><i class="meta-dot green"></i> Immutable History</span></div>
+        </div>
+
+        <div class="panel history-panel">
           <div class="panel-head wrap">
-            <div><h3>تاریخچه لینک‌ها</h3><p>تمام UTMها با سازنده، تاریخ و وضعیت ثبت می‌شوند.</p></div>
-            <button id="filteredCsvBtn" class="btn secondary">CSV فیلترشده</button>
+            <div class="panel-title">
+              <span class="panel-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v14H5zM8 9h8M8 13h8M8 17h5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+              </span>
+              <div><h3>تمام لینک‌های ثبت‌شده</h3><p>جستجو، فیلتر و بررسی عملکرد انتشارها.</p></div>
+            </div>
+            <button id="filteredCsvBtn" class="btn secondary">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v10m0 0 3.5-3.5M12 14l-3.5-3.5M5 19h14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>CSV فیلترشده</span>
+            </button>
           </div>
 
           <div class="filters">
-            <input id="search" type="search" placeholder="جستجو در ID، کمپین، URL، Placement...">
+            <div class="search-shell">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m16 16 4 4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+              <input id="search" type="search" placeholder="جستجو در ID، کمپین، URL، Placement...">
+            </div>
             <select id="filterCampaign"></select>
             <select id="filterSource"></select>
             <select id="filterMedium"></select>
@@ -234,8 +421,8 @@
               <option value="archived">Archived</option>
               <option value="deleted">Deleted</option>
             </select>
-            <input id="fromDate" type="date" title="از تاریخ">
-            <input id="toDate" type="date" title="تا تاریخ">
+            <label class="mini-date"><span>از</span><input id="fromDate" type="date" title="از تاریخ"></label>
+            <label class="mini-date"><span>تا</span><input id="toDate" type="date" title="تا تاریخ"></label>
           </div>
 
           <div class="table-wrap">
@@ -251,17 +438,33 @@
           </div>
 
           <div class="pager">
-            <button id="prevPage" class="btn ghost">قبلی</button>
+            <button id="prevPage" class="btn ghost">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 7-5 5 5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>قبلی</span>
+            </button>
             <span id="pageInfo">1 / 1</span>
-            <button id="nextPage" class="btn ghost">بعدی</button>
+            <button id="nextPage" class="btn ghost">
+              <span>بعدی</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 7 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
           </div>
         </div>
       </section>
 
       <section id="view-definitions" class="view">
-        <div class="panel">
+        <div class="section-intro">
+          <div><span class="section-kicker">DATA DICTIONARY</span><h3>تعاریف استاندارد</h3></div>
+          <div class="intro-meta"><span><i class="meta-dot cyan"></i> Controlled Vocabulary</span></div>
+        </div>
+
+        <div class="panel definitions-panel">
           <div class="panel-head">
-            <div><h3>تعاریف قابل انتخاب</h3><p>لیست‌هایی که در فرم ساخت UTM نمایش داده می‌شوند.</p></div>
+            <div class="panel-title">
+              <span class="panel-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h12M7 12h12M7 19h12M4 5h.01M4 12h.01M4 19h.01" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </span>
+              <div><h3>تعاریف قابل انتخاب</h3><p>لیست‌هایی که در فرم ساخت UTM نمایش داده می‌شوند.</p></div>
+            </div>
           </div>
 
           <div id="tabs" class="tabs">
@@ -275,7 +478,10 @@
 
           <div class="def-toolbar">
             <span id="defCount" class="muted">—</span>
-            <button id="addDefBtn" class="btn primary">＋ افزودن مورد جدید</button>
+            <button id="addDefBtn" class="btn primary">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              <span>افزودن مورد جدید</span>
+            </button>
           </div>
 
           <div id="defList" class="def-list"></div>
@@ -283,28 +489,60 @@
       </section>
 
       <section id="view-exports" class="view">
-        <div class="grid two">
+        <div class="section-intro">
+          <div><span class="section-kicker">REPORTING</span><h3>خروجی داده‌ها</h3></div>
+          <div class="intro-meta"><span><i class="meta-dot purple"></i> Analysis Ready</span></div>
+        </div>
+
+        <div class="grid two export-grid">
           <div class="panel export-card">
-            <div class="export-icon">CSV</div>
-            <h3>خروجی CSV</h3>
-            <p>خروجی مستقیم از تاریخچه ذخیره‌شده.</p>
-            <button id="csvBtn" class="btn primary wide">دانلود CSV</button>
+            <div class="export-top">
+              <div class="export-icon csv-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H7zM14 3v5h4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9 13h6M9 16h6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              </div>
+              <span class="format-chip">.CSV</span>
+            </div>
+            <div><h3>خروجی CSV</h3><p>خروجی مستقیم و سبک از تاریخچه ذخیره‌شده برای تحلیل سریع.</p></div>
+            <button id="csvBtn" class="btn primary wide">
+              <span>دانلود CSV</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v10m0 0 3.5-3.5M12 14l-3.5-3.5M5 19h14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
           </div>
 
-          <div class="panel export-card">
-            <div class="export-icon">XLSX</div>
-            <h3>خروجی Excel</h3>
-            <p>آخرین فایل Excel ساخته‌شده از اطلاعات پروژه.</p>
-            <button id="xlsxBtn" class="btn secondary wide">دانلود Excel</button>
+          <div class="panel export-card excel-card">
+            <div class="export-top">
+              <div class="export-icon xlsx-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H7zM14 3v5h4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m9 13 5 5m0-5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              </div>
+              <span class="format-chip">.XLSX</span>
+            </div>
+            <div><h3>خروجی Excel</h3><p>آخرین فایل Excel ساخته‌شده از اطلاعات پروژه برای گزارش‌گیری کامل.</p></div>
+            <button id="xlsxBtn" class="btn secondary wide">
+              <span>دانلود Excel</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v10m0 0 3.5-3.5M12 14l-3.5-3.5M5 19h14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
           </div>
         </div>
       </section>
 
       <section id="view-users" class="view owner-only hidden">
+        <div class="section-intro">
+          <div><span class="section-kicker">ACCESS CONTROL</span><h3>کاربران پنل</h3></div>
+          <div class="intro-meta"><span><i class="meta-dot green"></i> Owner Managed</span></div>
+        </div>
+
         <div class="panel">
           <div class="panel-head">
-            <div><h3>کاربران پنل</h3><p>کاربران فقط با نام کاربری و رمز داخلی همین پنل وارد می‌شوند.</p></div>
-            <button id="addUserBtn" class="btn primary">＋ کاربر جدید</button>
+            <div class="panel-title">
+              <span class="panel-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3.5 19c.6-3.4 2.4-5 5.5-5 2.2 0 3.8.8 4.7 2.5M17 8v6m-3-3h6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+              </span>
+              <div><h3>کاربران داخلی سیستم</h3><p>مدیریت کاربران فقط برای Owner.</p></div>
+            </div>
+            <button id="addUserBtn" class="btn primary">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              <span>کاربر جدید</span>
+            </button>
           </div>
           <div id="usersList" class="def-list"></div>
         </div>
@@ -315,13 +553,22 @@
   <div id="modalBack" class="modal-back hidden">
     <div class="modal">
       <div class="modal-head">
-        <h3 id="modalTitle">—</h3>
-        <button id="closeModal" class="icon">×</button>
+        <div class="modal-heading-wrap">
+          <span class="modal-mark">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 8v4l3 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </span>
+          <h3 id="modalTitle">—</h3>
+        </div>
+        <button id="closeModal" class="icon" aria-label="بستن">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 7 10 10M17 7 7 17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
       </div>
       <div id="modalBody" class="modal-body"></div>
       <div id="modalActions" class="modal-actions"></div>
     </div>
   </div>
+
+  <div id="datePickerRoot" class="date-picker-root hidden" aria-hidden="true"></div>
 
   <script src="/app.js" defer></script>
 </body>
