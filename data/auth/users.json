@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "users": [
+    {
+      "username": "owner",
+      "name": "مدیر اصلی",
+      "role": "owner",
+      "active": true,
+      "password": {
+        "algorithm": "PBKDF2-SHA256",
+        "iterations": 100000,
+        "salt": "HTgI2vjQjeprvepHVSl_8A",
+        "hash": "2n4ao3Uv_Pra5FOpb781sBw2Hap3uhPFlj7sFTctwLg"
+      },
+      "createdAt": "2026-08-19T07:29:36.430Z",
+      "createdBy": "bootstrap"
+    },
+    {
+      "username": "marketing",
+      "name": "مسئول مارکتینگ",
+      "role": "marketing",
+      "active": true,
+      "password": {
+        "algorithm": "PBKDF2-SHA256",
+        "iterations": 100000,
+        "salt": "XSeQK9O3PymCShiCeEpVOw",
+        "hash": "OScbBPFctnhF9DjrarJ0-dskSeJcMAagRXhTRn4b81w"
+      },
+      "createdAt": "2026-08-19T07:29:36.430Z",
+      "createdBy": "bootstrap"
+    },
+    {
+      "username": "technical",
+      "name": "مسئول فنی",
+      "role": "technical",
+      "active": true,
+      "password": {
+        "algorithm": "PBKDF2-SHA256",
+        "iterations": 100000,
+        "salt": "WhDeEwctje6FadcDZcm5VQ",
+        "hash": "U3NWwhtMPjltDhJGnI9Km0lDRUgzGD-4SFaG6SNT0nQ"
+      },
+      "createdAt": "2026-08-19T07:29:36.430Z",
+      "createdBy": "bootstrap"
+    }
+  ]
+}
