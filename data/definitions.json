@@ -184,9 +184,11 @@
       "contentTypeId": "CT-BANNER",
       "version": "v1",
       "notes": "",
-      "status": "active",
+      "status": "deleted",
       "createdBy": "owner",
-      "createdAt": "2026-08-19T07:34:28.874Z"
+      "createdAt": "2026-08-19T07:34:28.874Z",
+      "deletedAt": "2026-08-19T09:31:30.138Z",
+      "deletedBy": "owner"
     }
   ],
   "audiences": []
