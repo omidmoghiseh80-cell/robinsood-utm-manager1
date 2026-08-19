@@ -134,7 +134,6 @@ function setupFail(message){
   $("setupError").textContent = message;
   $("setupError").classList.remove("hidden");
 }
-
 function showLogin() {
   $("app").classList.add("hidden");
   $("setupScreen").classList.add("hidden");
@@ -203,6 +202,7 @@ async function refresh() {
     renderHistory();
     renderDefs();
     renderUsers();
+    enhanceDateInputs();
   } catch (e) {
     toast(e.message, "bad");
   } finally {
@@ -229,6 +229,7 @@ function show(view) {
   if (view === "history") renderHistory();
   if (view === "definitions") renderDefs();
   if (view === "users") renderUsers();
+  requestAnimationFrame(enhanceDateInputs);
 }
 
 function def(type, id) {
@@ -537,8 +538,8 @@ function campaignModal(onSave) {
       </div>
       <label class="field"><span>پیش‌نمایش ساختار Campaign</span><input id="campPreview" class="ltr" readonly></label>
       <div class="grid two">
-        <label class="field"><span>شروع</span><input id="campStart" type="date"></label>
-        <label class="field"><span>پایان</span><input id="campEnd" type="date"></label>
+        <label class="field date-field"><span>شروع</span><input id="campStart" type="date"></label>
+        <label class="field date-field"><span>پایان</span><input id="campEnd" type="date"></label>
       </div>
     </div>`,
     [
@@ -564,6 +565,7 @@ function campaignModal(onSave) {
   };
   ["campProduct","campObjective","campPeriod","campYear"].forEach(id => $(id).oninput = update);
   update();
+  requestAnimationFrame(enhanceDateInputs);
 }
 function creativeModal(onSave) {
   const types = active("contentTypes");
@@ -741,6 +743,160 @@ function closeModal() {
   $("modalBack").classList.add("hidden");
   $("modalBody").innerHTML = "";
   $("modalActions").innerHTML = "";
+  closeDatePicker();
+}
+
+/* ---------- Premium Date Picker ---------- */
+const MONTHS_FA = ["ژانویه","فوریه","مارس","آوریل","مه","ژوئن","ژوئیه","اوت","سپتامبر","اکتبر","نوامبر","دسامبر"];
+const WEEK_FA = ["ی","د","س","چ","پ","ج","ش"];
+let datePickerInput = null;
+let datePickerCursor = null;
+
+function isoDate(date){
+  const y = date.getFullYear();
+  const m = String(date.getMonth()+1).padStart(2,"0");
+  const d = String(date.getDate()).padStart(2,"0");
+  return `${y}-${m}-${d}`;
+}
+function parseIso(value){
+  if(!/^\d{4}-\d{2}-\d{2}$/.test(value||"")) return null;
+  const [y,m,d] = value.split("-").map(Number);
+  const dt = new Date(y,m-1,d);
+  return Number.isNaN(dt.getTime()) ? null : dt;
+}
+function sameDay(a,b){
+  return a && b && a.getFullYear()===b.getFullYear() && a.getMonth()===b.getMonth() && a.getDate()===b.getDate();
+}
+function enhanceDateInputs(){
+  $$('input[type="date"]').forEach(input=>{
+    if(input.dataset.proDate) return;
+    input.dataset.proDate="1";
+    input.classList.add("date-pro");
+    input.readOnly = true;
+    input.addEventListener("click", e=>{
+      e.preventDefault();
+      openDatePicker(input);
+    });
+    input.addEventListener("focus", ()=>openDatePicker(input));
+    input.addEventListener("keydown", e=>{
+      if(e.key==="Enter" || e.key===" "){e.preventDefault();openDatePicker(input)}
+    });
+  });
+}
+function openDatePicker(input){
+  const root = $("datePickerRoot");
+  if(!root) return;
+  datePickerInput = input;
+  const selected = parseIso(input.value);
+  datePickerCursor = selected ? new Date(selected) : new Date();
+  datePickerCursor.setDate(1);
+  renderDatePicker();
+  root.classList.remove("hidden");
+  root.setAttribute("aria-hidden","false");
+  positionDatePicker();
+}
+function closeDatePicker(){
+  const root = $("datePickerRoot");
+  if(!root) return;
+  root.classList.add("hidden");
+  root.setAttribute("aria-hidden","true");
+  datePickerInput = null;
+}
+function positionDatePicker(){
+  const root = $("datePickerRoot");
+  if(!datePickerInput || root.classList.contains("hidden")) return;
+  const rect = datePickerInput.getBoundingClientRect();
+  const width = Math.min(316, window.innerWidth - 24);
+  const left = Math.max(12, Math.min(window.innerWidth - width - 12, rect.left + rect.width - width));
+  const roomBelow = window.innerHeight - rect.bottom;
+  const top = roomBelow > 370 ? rect.bottom + 8 : Math.max(12, rect.top - 368);
+  root.style.width = `${width}px`;
+  root.style.left = `${left}px`;
+  root.style.top = `${top}px`;
+}
+function renderDatePicker(){
+  const root = $("datePickerRoot");
+  if(!root || !datePickerCursor) return;
+  const year = datePickerCursor.getFullYear();
+  const month = datePickerCursor.getMonth();
+  const selected = parseIso(datePickerInput?.value);
+  const today = new Date();
+
+  const first = new Date(year,month,1);
+  const start = new Date(year,month,1-first.getDay());
+
+  let days = "";
+  for(let i=0;i<42;i++){
+    const d = new Date(start);
+    d.setDate(start.getDate()+i);
+    const outside = d.getMonth()!==month;
+    const classes = [
+      "dp-day",
+      outside ? "muted-day" : "",
+      sameDay(d,today) ? "today" : "",
+      sameDay(d,selected) ? "selected" : ""
+    ].filter(Boolean).join(" ");
+    days += `<button type="button" class="${classes}" data-date="${isoDate(d)}">${d.getDate()}</button>`;
+  }
+
+  root.innerHTML = `
+    <div class="dp-head">
+      <button type="button" class="dp-nav" data-dp="prev" aria-label="ماه قبل">‹</button>
+      <div class="dp-title"><b>${MONTHS_FA[month]} ${year}</b><span>انتخاب تاریخ</span></div>
+      <button type="button" class="dp-nav" data-dp="next" aria-label="ماه بعد">›</button>
+    </div>
+    <div class="dp-week">${WEEK_FA.map(x=>`<span>${x}</span>`).join("")}</div>
+    <div class="dp-grid">${days}</div>
+    <div class="dp-foot">
+      <button type="button" data-dp="clear">پاک کردن</button>
+      <button type="button" class="primary-date" data-dp="today">امروز</button>
+    </div>`;
+
+  root.querySelector('[data-dp="prev"]').onclick = ()=>{
+    datePickerCursor.setMonth(datePickerCursor.getMonth()-1);
+    renderDatePicker();
+  };
+  root.querySelector('[data-dp="next"]').onclick = ()=>{
+    datePickerCursor.setMonth(datePickerCursor.getMonth()+1);
+    renderDatePicker();
+  };
+  root.querySelector('[data-dp="today"]').onclick = ()=>setDateValue(new Date());
+  root.querySelector('[data-dp="clear"]').onclick = ()=>{
+    if(datePickerInput){
+      datePickerInput.value="";
+      datePickerInput.dispatchEvent(new Event("input",{bubbles:true}));
+      datePickerInput.dispatchEvent(new Event("change",{bubbles:true}));
+    }
+    closeDatePicker();
+  };
+  root.querySelectorAll("[data-date]").forEach(btn=>{
+    btn.onclick = ()=>{
+      const chosen = parseIso(btn.dataset.date);
+      if(chosen) setDateValue(chosen);
+    };
+  });
+}
+function setDateValue(date){
+  if(!datePickerInput) return;
+  datePickerInput.value = isoDate(date);
+  datePickerInput.dispatchEvent(new Event("input",{bubbles:true}));
+  datePickerInput.dispatchEvent(new Event("change",{bubbles:true}));
+  closeDatePicker();
+}
+
+/* ---------- UI Motion ---------- */
+function addRipple(e){
+  const btn = e.target.closest(".btn,.plus,.nav,.tab,.icon,.dp-nav,.dp-day");
+  if(!btn || btn.classList.contains("dp-day")) return;
+  const rect = btn.getBoundingClientRect();
+  const size = Math.max(rect.width,rect.height);
+  const ripple = document.createElement("span");
+  ripple.className = "ui-ripple";
+  ripple.style.width = ripple.style.height = `${size}px`;
+  ripple.style.left = `${e.clientX - rect.left - size/2}px`;
+  ripple.style.top = `${e.clientY - rect.top - size/2}px`;
+  btn.appendChild(ripple);
+  setTimeout(()=>ripple.remove(),600);
 }
 
 function bind() {
@@ -784,7 +940,24 @@ function bind() {
 
   $("closeModal").onclick = closeModal;
   $("modalBack").onclick = e => { if (e.target === $("modalBack")) closeModal(); };
-  document.onkeydown = e => { if (e.key === "Escape") closeModal(); };
+  document.onkeydown = e => {
+    if (e.key === "Escape") {
+      if (!$("datePickerRoot").classList.contains("hidden")) closeDatePicker();
+      else closeModal();
+    }
+  };
+
+  document.addEventListener("pointerdown", e=>{
+    addRipple(e);
+    const root = $("datePickerRoot");
+    if(datePickerInput && !root.contains(e.target) && e.target !== datePickerInput) closeDatePicker();
+  });
+  window.addEventListener("resize", positionDatePicker);
+  window.addEventListener("scroll", positionDatePicker, true);
+
+  const observer = new MutationObserver(()=>enhanceDateInputs());
+  observer.observe(document.body,{childList:true,subtree:true});
+  enhanceDateInputs();
 }
 
 bind();
