@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f5f6fb">
+  <meta name="robots" content="noindex,nofollow">
+  <title>RobinSood UTM Manager</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div id="toasts" class="toasts"></div>
+
+  <section id="setupScreen" class="auth-shell hidden">
+    <div class="auth-card setup-card">
+      <div class="brand">RS</div>
+      <h1>راه‌اندازی اولیه</h1>
+      <p class="muted">سه حساب داخلی پنل را تعریف کن. این مرحله فقط یک‌بار نمایش داده می‌شود.</p>
+
+      <label class="field">
+        <span>Bootstrap Secret</span>
+        <input id="bootstrapSecret" type="password" autocomplete="off" placeholder="رمز راه‌اندازی اولیه">
+      </label>
+
+      <div class="user-setup-block">
+        <h3>مدیر اصلی</h3>
+        <div class="grid three">
+          <label class="field"><span>نام نمایشی</span><input id="ownerName" value="مدیر اصلی"></label>
+          <label class="field"><span>نام کاربری</span><input id="ownerUsername" class="ltr" value="owner"></label>
+          <label class="field"><span>رمز عبور</span><input id="ownerPassword" type="password" autocomplete="new-password"></label>
+        </div>
+      </div>
+
+      <div class="user-setup-block">
+        <h3>مسئول مارکتینگ</h3>
+        <div class="grid three">
+          <label class="field"><span>نام نمایشی</span><input id="marketingName" value="مسئول مارکتینگ"></label>
+          <label class="field"><span>نام کاربری</span><input id="marketingUsername" class="ltr" value="marketing"></label>
+          <label class="field"><span>رمز عبور</span><input id="marketingPassword" type="password" autocomplete="new-password"></label>
+        </div>
+      </div>
+
+      <div class="user-setup-block">
+        <h3>مسئول فنی</h3>
+        <div class="grid three">
+          <label class="field"><span>نام نمایشی</span><input id="technicalName" value="مسئول فنی"></label>
+          <label class="field"><span>نام کاربری</span><input id="technicalUsername" class="ltr" value="technical"></label>
+          <label class="field"><span>رمز عبور</span><input id="technicalPassword" type="password" autocomplete="new-password"></label>
+        </div>
+      </div>
+
+      <div class="notice">رمز هر کاربر حداقل ۱۰ کاراکتر باشد. بعد از راه‌اندازی، هر سه نفر فقط با نام کاربری و رمز همین پنل وارد می‌شوند.</div>
+      <button id="finishSetupBtn" class="btn primary wide large">ثبت سه حساب و شروع</button>
+      <p id="setupError" class="error hidden"></p>
+    </div>
+  </section>
+
+  <section id="loginScreen" class="auth-shell hidden">
+    <div class="auth-card">
+      <div class="brand">RS</div>
+      <h1>UTM Manager</h1>
+      <p class="muted">مدیریت لینک‌های کمپین رابین‌سود</p>
+
+      <label class="field">
+        <span>نام کاربری</span>
+        <input id="usernameInput" class="ltr" autocomplete="username">
+      </label>
+
+      <label class="field" style="margin-top:14px">
+        <span>رمز عبور</span>
+        <input id="passwordInput" type="password" autocomplete="current-password">
+      </label>
+
+      <label class="check">
+        <input id="rememberSession" type="checkbox">
+        <span>روی همین دستگاه وارد بمان</span>
+      </label>
+
+      <button id="loginBtn" class="btn primary wide">ورود به پنل</button>
+      <p id="loginError" class="error hidden"></p>
+    </div>
+  </section>
+
+  <div id="app" class="app hidden">
+    <aside id="sidebar" class="sidebar">
+      <div class="side-brand">
+        <div class="brand mini">RS</div>
+        <div><b>UTM Manager</b><span>RobinSood</span></div>
+      </div>
+
+      <nav>
+        <button class="nav active" data-view="create">＋ ساخت UTM</button>
+        <button class="nav" data-view="history">◫ تاریخچه</button>
+        <button class="nav" data-view="definitions">⌘ تعاریف</button>
+        <button class="nav" data-view="exports">⇩ خروجی</button>
+        <button class="nav owner-only hidden" data-view="users">♙ کاربران</button>
+      </nav>
+
+      <div class="side-bottom">
+        <div class="user-box">
+          <div id="avatar" class="avatar">U</div>
+          <div><b id="userName">—</b><span id="userRole">—</span></div>
+        </div>
+        <button id="logoutBtn" class="btn ghost wide small">خروج</button>
+      </div>
+    </aside>
+
+    <main>
+      <header class="topbar">
+        <button id="menuBtn" class="icon mobile">☰</button>
+        <div class="heading">
+          <h2 id="pageTitle">ساخت UTM</h2>
+          <p id="pageSubtitle">لینک کمپین را استاندارد بساز و ذخیره کن.</p>
+        </div>
+        <button id="refreshBtn" class="btn secondary">↻ بروزرسانی</button>
+      </header>
+
+      <section id="view-create" class="view active">
+        <div class="create-grid">
+          <div class="panel">
+            <div class="panel-head">
+              <div><h3>اطلاعات لینک</h3><p>قبل از ثبت، لینک نهایی را در ستون پیش‌نمایش بررسی کن.</p></div>
+              <span class="pill">UTM Builder</span>
+            </div>
+
+            <form id="utmForm" class="stack">
+              <div class="grid two">
+                <label class="field">
+                  <span>کمپین <i>*</i></span>
+                  <div class="select-add">
+                    <select id="campaign" required></select>
+                    <button type="button" class="plus" data-add="campaigns">＋</button>
+                  </div>
+                </label>
+
+                <label class="field">
+                  <span>Source — محل انتشار <i>*</i></span>
+                  <div class="select-add">
+                    <select id="source" required></select>
+                    <button type="button" class="plus" data-add="sources">＋</button>
+                  </div>
+                </label>
+
+                <label class="field">
+                  <span>Medium — جنس تبلیغ <i>*</i></span>
+                  <div class="select-add">
+                    <select id="medium" required></select>
+                    <button type="button" class="plus" data-add="mediums">＋</button>
+                  </div>
+                </label>
+
+                <label class="field">
+                  <span>Creative <i>*</i></span>
+                  <div class="select-add">
+                    <select id="creative" required></select>
+                    <button type="button" class="plus" data-add="creatives">＋</button>
+                  </div>
+                </label>
+
+                <label class="field">
+                  <span>Audience / Term</span>
+                  <div class="select-add">
+                    <select id="audience"></select>
+                    <button type="button" class="plus" data-add="audiences">＋</button>
+                  </div>
+                </label>
+
+                <label class="field">
+                  <span>تاریخ انتشار</span>
+                  <input id="publishDate" type="date">
+                </label>
+              </div>
+
+              <label class="field">
+                <span>Destination URL <i>*</i></span>
+                <input id="destination" type="url" required placeholder="https://www.robinsood.com/...">
+              </label>
+
+              <div class="grid two">
+                <label class="field">
+                  <span>Placement / محل دقیق انتشار</span>
+                  <input id="placement" placeholder="مثلاً Telegram Ads - Prop Audience 01">
+                </label>
+                <label class="field">
+                  <span>یادداشت</span>
+                  <input id="notes" placeholder="اختیاری">
+                </label>
+              </div>
+
+              <div class="warning">
+                <b>بعد از ثبت، UTM قابل ویرایش نیست.</b>
+                <span>اگر اشتباه باشد، رکورد قبلی Archive و لینک جدید ساخته می‌شود.</span>
+              </div>
+
+              <button class="btn primary wide large" type="submit">ثبت و ساخت لینک UTM</button>
+            </form>
+          </div>
+
+          <aside class="panel preview">
+            <div class="panel-head compact">
+              <div><h3>پیش‌نمایش</h3><p>مقادیر نهایی لینک</p></div>
+            </div>
+            <div class="kv">
+              <div><span>Campaign</span><b id="pvCampaign">—</b></div>
+              <div><span>Source</span><b id="pvSource">—</b></div>
+              <div><span>Medium</span><b id="pvMedium">—</b></div>
+              <div><span>Content</span><b id="pvContent">—</b></div>
+              <div><span>Term</span><b id="pvTerm">—</b></div>
+            </div>
+            <div class="url-box">
+              <span>Final URL</span>
+              <code id="pvUrl">لینک مقصد را وارد کنید...</code>
+            </div>
+            <button id="copyPreview" class="btn secondary wide" type="button">کپی لینک پیش‌نمایش</button>
+          </aside>
+        </div>
+      </section>
+
+      <section id="view-history" class="view">
+        <div class="panel">
+          <div class="panel-head wrap">
+            <div><h3>تاریخچه لینک‌ها</h3><p>تمام UTMها با سازنده، تاریخ و وضعیت ثبت می‌شوند.</p></div>
+            <button id="filteredCsvBtn" class="btn secondary">CSV فیلترشده</button>
+          </div>
+
+          <div class="filters">
+            <input id="search" type="search" placeholder="جستجو در ID، کمپین، URL، Placement...">
+            <select id="filterCampaign"></select>
+            <select id="filterSource"></select>
+            <select id="filterMedium"></select>
+            <select id="filterStatus">
+              <option value="">همه وضعیت‌ها</option>
+              <option value="active">Active</option>
+              <option value="archived">Archived</option>
+              <option value="deleted">Deleted</option>
+            </select>
+            <input id="fromDate" type="date" title="از تاریخ">
+            <input id="toDate" type="date" title="تا تاریخ">
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th><th>کمپین</th><th>Source</th><th>Medium</th>
+                  <th>Creative</th><th>سازنده</th><th>تاریخ</th><th>وضعیت</th>
+                </tr>
+              </thead>
+              <tbody id="historyBody"></tbody>
+            </table>
+          </div>
+
+          <div class="pager">
+            <button id="prevPage" class="btn ghost">قبلی</button>
+            <span id="pageInfo">1 / 1</span>
+            <button id="nextPage" class="btn ghost">بعدی</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="view-definitions" class="view">
+        <div class="panel">
+          <div class="panel-head">
+            <div><h3>تعاریف قابل انتخاب</h3><p>لیست‌هایی که در فرم ساخت UTM نمایش داده می‌شوند.</p></div>
+          </div>
+
+          <div id="tabs" class="tabs">
+            <button class="tab active" data-def="campaigns">کمپین‌ها</button>
+            <button class="tab" data-def="sources">Sourceها</button>
+            <button class="tab" data-def="mediums">Mediumها</button>
+            <button class="tab" data-def="contentTypes">نوع محتوا</button>
+            <button class="tab" data-def="creatives">Creativeها</button>
+            <button class="tab" data-def="audiences">Audienceها</button>
+          </div>
+
+          <div class="def-toolbar">
+            <span id="defCount" class="muted">—</span>
+            <button id="addDefBtn" class="btn primary">＋ افزودن مورد جدید</button>
+          </div>
+
+          <div id="defList" class="def-list"></div>
+        </div>
+      </section>
+
+      <section id="view-exports" class="view">
+        <div class="grid two">
+          <div class="panel export-card">
+            <div class="export-icon">CSV</div>
+            <h3>خروجی CSV</h3>
+            <p>خروجی مستقیم از تاریخچه ذخیره‌شده.</p>
+            <button id="csvBtn" class="btn primary wide">دانلود CSV</button>
+          </div>
+
+          <div class="panel export-card">
+            <div class="export-icon">XLSX</div>
+            <h3>خروجی Excel</h3>
+            <p>آخرین فایل Excel ساخته‌شده از اطلاعات پروژه.</p>
+            <button id="xlsxBtn" class="btn secondary wide">دانلود Excel</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="view-users" class="view owner-only hidden">
+        <div class="panel">
+          <div class="panel-head">
+            <div><h3>کاربران پنل</h3><p>کاربران فقط با نام کاربری و رمز داخلی همین پنل وارد می‌شوند.</p></div>
+            <button id="addUserBtn" class="btn primary">＋ کاربر جدید</button>
+          </div>
+          <div id="usersList" class="def-list"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="modalBack" class="modal-back hidden">
+    <div class="modal">
+      <div class="modal-head">
+        <h3 id="modalTitle">—</h3>
+        <button id="closeModal" class="icon">×</button>
+      </div>
+      <div id="modalBody" class="modal-body"></div>
+      <div id="modalActions" class="modal-actions"></div>
+    </div>
+  </div>
+
+  <script src="/app.js" defer></script>
+</body>
+</html>

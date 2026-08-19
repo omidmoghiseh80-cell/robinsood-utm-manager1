@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 1,
+  "campaigns": [],
+  "sources": [
+    {
+      "id": "SRC-TELEGRAM",
+      "displayName": "Telegram",
+      "value": "telegram",
+      "status": "active",
+      "createdBy": "system",
+      "createdAt": "2026-08-19T00:00:00Z"
+    },
+    {
+      "id": "SRC-INSTAGRAM",
+      "displayName": "Instagram",
+      "value": "instagram",
+      "status": "active",
+      "createdBy": "system",
+      "createdAt": "2026-08-19T00:00:00Z"
+    },
+    {
+      "id": "SRC-IRANBROKER",
+      "displayName": "IranBroker",
+      "value": "iranbroker",
+      "status": "active",
+      "createdBy": "system",
+      "createdAt": "2026-08-19T00:00:00Z"
+    },
+    {
+      "id": "SRC-APARAT",
+      "displayName": "Aparat",
+      "value": "aparat",
+      "status": "active",
+      "createdBy": "system",
+      "createdAt": "2026-08-19T00:00:00Z"
+    },
+    {
+      "id": "SRC-GOOGLE",
+      "displayName": "Google",
+      "value": "google",
+      "status": "active",
+      "createdBy": "system",
+      "createdAt": "2026-08-19T00:00:00Z"
+    },
+    {
+      "id": "SRC-YEKTANET",
+      "displayName": "Yektanet",
+      "value": "yektanet",
+      "status": "active",
+      "createdBy": "system",
+      "createdAt": "2026-08-19T00:00:00Z"
+    },
+    {
+      "id": "SRC-NAJVA",
+      "displayName": "Najva",
+      "value": "najva",
+      "status": "active",
+      "createdBy": "system",
+      "createdAt": "2026-08-19T00:00:00Z"
+    }
+  ],
+  "mediums": [
+    {
+      "id": "MED-SMS",
+      "displayName": "SMS",
+      "value": "sms",
+      "status": "active",
+      "createdBy": "system",
+      "createdAt": "2026-08-19T00:00:00Z"
+    },
+    {
+      "id": "MED-EMAIL",
+      "displayName": "Email",
+      "value": "email",
+      "status": "active",
+      "createdBy": "system",
+      "createdAt": "2026-08-19T00:00:00Z"
+    },
+    {
+      "id": "MED-NATIVE-PAID",
+      "displayName": "Native Paid",
+      "value": "native_paid",
+      "status": "active",
+      "createdBy": "system",
+      "createdAt": "2026-08-19T00:00:00Z"
+    },
+    {
+      "id": "MED-REFERRAL",
+      "displayName": "Referral",
+      "value": "referral",
+      "status": "active",
+      "createdBy": "system",
+      "createdAt": "2026-08-19T00:00:00Z"
+    },
+    {
+      "id": "MED-VIDEO",
+      "displayName": "Video",
+      "value": "video",
+      "status": "active",
+      "createdBy": "system",
+      "createdAt": "2026-08-19T00:00:00Z"
+    }
+  ],
+  "contentTypes": [
+    {
+      "id": "CT-TEXT",
+      "displayName": "Text",
+      "value": "text",
+      "status": "active",
+      "createdBy": "system",
+      "createdAt": "2026-08-19T00:00:00Z"
+    },
+    {
+      "id": "CT-BANNER",
+      "displayName": "Banner",
+      "value": "banner",
+      "status": "active",
+      "createdBy": "system",
+      "createdAt": "2026-08-19T00:00:00Z"
+    },
+    {
+      "id": "CT-VIDEO",
+      "displayName": "Video",
+      "value": "video",
+      "status": "active",
+      "createdBy": "system",
+      "createdAt": "2026-08-19T00:00:00Z"
+    },
+    {
+      "id": "CT-STORY",
+      "displayName": "Story",
+      "value": "story",
+      "status": "active",
+      "createdBy": "system",
+      "createdAt": "2026-08-19T00:00:00Z"
+    },
+    {
+      "id": "CT-POST",
+      "displayName": "Post",
+      "value": "post",
+      "status": "active",
+      "createdBy": "system",
+      "createdAt": "2026-08-19T00:00:00Z"
+    },
+    {
+      "id": "CT-CAROUSEL",
+      "displayName": "Carousel",
+      "value": "carousel",
+      "status": "active",
+      "createdBy": "system",
+      "createdAt": "2026-08-19T00:00:00Z"
+    },
+    {
+      "id": "CT-AUDIO",
+      "displayName": "Audio",
+      "value": "audio",
+      "status": "active",
+      "createdBy": "system",
+      "createdAt": "2026-08-19T00:00:00Z"
+    }
+  ],
+  "creatives": [],
+  "audiences": []
+}

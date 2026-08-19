@@ -1,0 +1,27 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "robinsood-utm-manager",
+  "main": "src/index.js",
+  "compatibility_date": "2026-08-19",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"]
+  },
+  "vars": {
+    "GITHUB_OWNER": "CHANGE_ME",
+    "GITHUB_REPO": "CHANGE_ME",
+    "GITHUB_BRANCH": "main"
+  },
+  "secrets": {
+    "required": [
+      "GITHUB_TOKEN",
+      "SESSION_SECRET",
+      "BOOTSTRAP_SECRET"
+    ]
+  },
+  "observability": {
+    "enabled": true
+  }
+}
