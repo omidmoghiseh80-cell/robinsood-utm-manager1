@@ -33,10 +33,10 @@
       "role": "owner"
     },
     "createdAt": "2026-08-19T07:34:55.231Z",
-    "status": "active",
+    "status": "deleted",
     "archivedAt": null,
     "archivedBy": null,
-    "deletedAt": null,
-    "deletedBy": null
+    "deletedAt": "2026-08-19T07:37:31.643Z",
+    "deletedBy": "owner"
   }
 ]
