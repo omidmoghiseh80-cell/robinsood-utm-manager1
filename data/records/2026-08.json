@@ -118,5 +118,45 @@
     "archivedBy": null,
     "deletedAt": null,
     "deletedBy": null
+  },
+  {
+    "id": "UTM-260825-042901-A14298C2",
+    "campaign": {
+      "id": "CMP-260825-040435-CA37AC31",
+      "displayName": "پیام‌های متنی روزانه",
+      "value": "other_challenges_challenges_cost_ever_1405"
+    },
+    "source": {
+      "id": "SRC-TELEGRAM",
+      "displayName": "Telegram",
+      "value": "telegram"
+    },
+    "medium": {
+      "id": "MED-260825-040705-7B535FCC",
+      "displayName": "robinsood_channel",
+      "value": "robinsood_channel"
+    },
+    "creative": {
+      "id": "CR-260825-040046-DDF1BDDC",
+      "displayName": "پیام متنی کانال",
+      "value": "text_cr_260825_040046_ddf1bddc_v1"
+    },
+    "audience": null,
+    "destinationUrl": "https://www.robinsood.com/account/userlogin",
+    "finalUrl": "https://www.robinsood.com/account/userlogin?utm_source=telegram&utm_medium=robinsood_channel&utm_campaign=other_challenges_challenges_cost_ever_1405&utm_content=text_cr_260825_040046_ddf1bddc_v1",
+    "placement": "Telegram channel",
+    "publishDate": "2026-08-25",
+    "notes": "",
+    "createdBy": {
+      "username": "marketing",
+      "name": "مسئول مارکتینگ",
+      "role": "marketing"
+    },
+    "createdAt": "2026-08-25T04:29:01.059Z",
+    "status": "active",
+    "archivedAt": null,
+    "archivedBy": null,
+    "deletedAt": null,
+    "deletedBy": null
   }
 ]
