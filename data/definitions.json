@@ -44,6 +44,20 @@
       "status": "active",
       "createdBy": "marketing",
       "createdAt": "2026-08-25T08:46:30.212Z"
+    },
+    {
+      "id": "CMP-260825-091540-3723FD1E",
+      "displayName": "کمپین جذب فول فاند پرو و افزایش احراز هویت و ثبت نام شهریور",
+      "value": "w1_iran_broker_topic_shahrivar_1405",
+      "product": "w1",
+      "objective": "iran_broker_topic",
+      "period": "shahrivar",
+      "year": "1405",
+      "startDate": "2026-08-25",
+      "endDate": "2026-08-31",
+      "status": "active",
+      "createdBy": "marketing",
+      "createdAt": "2026-08-25T09:15:40.433Z"
     }
   ],
   "sources": [
