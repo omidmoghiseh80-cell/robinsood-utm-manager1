@@ -478,5 +478,45 @@
     "archivedBy": null,
     "deletedAt": null,
     "deletedBy": null
+  },
+  {
+    "id": "UTM-260825-102459-F0C15863",
+    "campaign": {
+      "id": "CMP-260825-101424-53264E8F",
+      "displayName": "چاوش کمپین شهریور ماه",
+      "value": "fullfun_pro_chavosh_shahrivar_1405"
+    },
+    "source": {
+      "id": "SRC-260825-101513-C38B013A",
+      "displayName": "CHAVOSH",
+      "value": "chavosh"
+    },
+    "medium": {
+      "id": "MED-260825-101544-73583EE0",
+      "displayName": "CHAVOSH",
+      "value": "chavosh"
+    },
+    "creative": {
+      "id": "CR-260825-101625-18413FD9",
+      "displayName": "لینک داخلی لندینگ چاوش",
+      "value": "text_cr_260825_101625_18413fd9_v1"
+    },
+    "audience": null,
+    "destinationUrl": "https://pegah.robinsood.com/",
+    "finalUrl": "https://pegah.robinsood.com/?utm_source=chavosh&utm_medium=chavosh&utm_campaign=fullfun_pro_chavosh_shahrivar_1405&utm_content=text_cr_260825_101625_18413fd9_v1",
+    "placement": "",
+    "publishDate": "2026-08-25",
+    "notes": "",
+    "createdBy": {
+      "username": "marketing",
+      "name": "مسئول مارکتینگ",
+      "role": "marketing"
+    },
+    "createdAt": "2026-08-25T10:24:59.548Z",
+    "status": "active",
+    "archivedAt": null,
+    "archivedBy": null,
+    "deletedAt": null,
+    "deletedBy": null
   }
 ]
