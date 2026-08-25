@@ -260,6 +260,17 @@
       "status": "active",
       "createdBy": "marketing",
       "createdAt": "2026-08-25T04:00:46.438Z"
+    },
+    {
+      "id": "CR-260825-084809-D27D6486",
+      "displayName": "لینک داخلی ریپورتاژ",
+      "value": "text_cr_260825_084809_d27d6486_v1",
+      "contentTypeId": "CT-TEXT",
+      "version": "v1",
+      "notes": "",
+      "status": "active",
+      "createdBy": "marketing",
+      "createdAt": "2026-08-25T08:48:09.167Z"
     }
   ],
   "audiences": []
