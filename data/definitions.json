@@ -30,6 +30,20 @@
       "status": "active",
       "createdBy": "marketing",
       "createdAt": "2026-08-25T04:04:35.739Z"
+    },
+    {
+      "id": "CMP-260825-084630-4096D1CA",
+      "displayName": "گزارش خبری عصر قلم",
+      "value": "robinsood_report_shahrivar_1405",
+      "product": "robinsood",
+      "objective": "report",
+      "period": "shahrivar",
+      "year": "1405",
+      "startDate": "2026-08-25",
+      "endDate": "2027-08-25",
+      "status": "active",
+      "createdBy": "marketing",
+      "createdAt": "2026-08-25T08:46:30.212Z"
     }
   ],
   "sources": [
