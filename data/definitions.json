@@ -190,6 +190,14 @@
       "status": "active",
       "createdBy": "marketing",
       "createdAt": "2026-08-25T08:47:08.459Z"
+    },
+    {
+      "id": "MED-260825-091629-42946251",
+      "displayName": "ایران بروکر",
+      "value": "topic",
+      "status": "active",
+      "createdBy": "marketing",
+      "createdAt": "2026-08-25T09:16:29.232Z"
     }
   ],
   "contentTypes": [
