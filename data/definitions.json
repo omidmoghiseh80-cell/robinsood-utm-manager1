@@ -334,6 +334,17 @@
       "status": "active",
       "createdBy": "marketing",
       "createdAt": "2026-08-25T09:16:51.281Z"
+    },
+    {
+      "id": "CR-260825-101625-18413FD9",
+      "displayName": "لینک داخلی لندینگ چاوش",
+      "value": "text_cr_260825_101625_18413fd9_v1",
+      "contentTypeId": "CT-TEXT",
+      "version": "v1",
+      "notes": "",
+      "status": "active",
+      "createdBy": "marketing",
+      "createdAt": "2026-08-25T10:16:25.255Z"
     }
   ],
   "audiences": []
