@@ -38,5 +38,45 @@
     "archivedBy": null,
     "deletedAt": "2026-08-19T07:37:31.643Z",
     "deletedBy": "owner"
+  },
+  {
+    "id": "UTM-260825-040749-6A267E6A",
+    "campaign": {
+      "id": "CMP-260825-040435-CA37AC31",
+      "displayName": "پیام‌های متنی روزانه",
+      "value": "other_challenges_challenges_cost_ever_1405"
+    },
+    "source": {
+      "id": "SRC-260825-040736-7A5989EB",
+      "displayName": "robinsood_channel",
+      "value": "robinsood_channel"
+    },
+    "medium": {
+      "id": "MED-260825-040705-7B535FCC",
+      "displayName": "robinsood_channel",
+      "value": "robinsood_channel"
+    },
+    "creative": {
+      "id": "CR-260825-040046-DDF1BDDC",
+      "displayName": "پیام متنی کانال",
+      "value": "text_cr_260825_040046_ddf1bddc_v1"
+    },
+    "audience": null,
+    "destinationUrl": "https://www.robinsood.com/#Tariff",
+    "finalUrl": "https://www.robinsood.com/?utm_source=robinsood_channel&utm_medium=robinsood_channel&utm_campaign=other_challenges_challenges_cost_ever_1405&utm_content=text_cr_260825_040046_ddf1bddc_v1#Tariff",
+    "placement": "Telegram channel",
+    "publishDate": "2026-08-25",
+    "notes": "",
+    "createdBy": {
+      "username": "marketing",
+      "name": "مسئول مارکتینگ",
+      "role": "marketing"
+    },
+    "createdAt": "2026-08-25T04:07:49.043Z",
+    "status": "active",
+    "archivedAt": null,
+    "archivedBy": null,
+    "deletedAt": null,
+    "deletedBy": null
   }
 ]
