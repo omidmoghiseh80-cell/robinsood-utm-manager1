@@ -238,5 +238,45 @@
     "archivedBy": null,
     "deletedAt": null,
     "deletedBy": null
+  },
+  {
+    "id": "UTM-260825-085025-354A85BE",
+    "campaign": {
+      "id": "CMP-260825-084630-4096D1CA",
+      "displayName": "گزارش خبری عصر قلم",
+      "value": "robinsood_report_shahrivar_1405"
+    },
+    "source": {
+      "id": "SRC-260825-084745-DB702A58",
+      "displayName": "عصر قلم",
+      "value": "report"
+    },
+    "medium": {
+      "id": "MED-260825-084708-CE8E74A3",
+      "displayName": "ریپورتاژ",
+      "value": "report"
+    },
+    "creative": {
+      "id": "CR-260825-084809-D27D6486",
+      "displayName": "لینک داخلی ریپورتاژ",
+      "value": "text_cr_260825_084809_d27d6486_v1"
+    },
+    "audience": null,
+    "destinationUrl": "https://www.robinsood.com/faq",
+    "finalUrl": "https://www.robinsood.com/faq?utm_source=report&utm_medium=report&utm_campaign=robinsood_report_shahrivar_1405&utm_content=text_cr_260825_084809_d27d6486_v1",
+    "placement": "",
+    "publishDate": "2026-08-25",
+    "notes": "",
+    "createdBy": {
+      "username": "marketing",
+      "name": "مسئول مارکتینگ",
+      "role": "marketing"
+    },
+    "createdAt": "2026-08-25T08:50:25.139Z",
+    "status": "active",
+    "archivedAt": null,
+    "archivedBy": null,
+    "deletedAt": null,
+    "deletedBy": null
   }
 ]
