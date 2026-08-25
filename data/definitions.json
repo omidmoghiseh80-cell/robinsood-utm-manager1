@@ -160,6 +160,14 @@
       "status": "active",
       "createdBy": "marketing",
       "createdAt": "2026-08-25T04:07:05.239Z"
+    },
+    {
+      "id": "MED-260825-084708-CE8E74A3",
+      "displayName": "ریپورتاژ",
+      "value": "report",
+      "status": "active",
+      "createdBy": "marketing",
+      "createdAt": "2026-08-25T08:47:08.459Z"
     }
   ],
   "contentTypes": [
