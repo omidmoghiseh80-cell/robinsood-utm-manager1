@@ -438,5 +438,45 @@
     "archivedBy": null,
     "deletedAt": null,
     "deletedBy": null
+  },
+  {
+    "id": "UTM-260825-102412-3F3D14C5",
+    "campaign": {
+      "id": "CMP-260825-101424-53264E8F",
+      "displayName": "چاوش کمپین شهریور ماه",
+      "value": "fullfun_pro_chavosh_shahrivar_1405"
+    },
+    "source": {
+      "id": "SRC-260825-101513-C38B013A",
+      "displayName": "CHAVOSH",
+      "value": "chavosh"
+    },
+    "medium": {
+      "id": "MED-260825-101544-73583EE0",
+      "displayName": "CHAVOSH",
+      "value": "chavosh"
+    },
+    "creative": {
+      "id": "CR-260825-101625-18413FD9",
+      "displayName": "لینک داخلی لندینگ چاوش",
+      "value": "text_cr_260825_101625_18413fd9_v1"
+    },
+    "audience": null,
+    "destinationUrl": "https://www.robinsood.com/articledetails/2137/%D9%BE%D9%84%D8%AA%D9%81%D8%B1%D9%85-%D9%85%D8%B9%D8%A7%D9%85%D9%84%D8%A7%D8%AA%DB%8C-%D8%A7%D8%AE%D8%AA%D8%B5%D8%A7%D8%B5%DB%8C-%D8%B1%D8%A7%D8%A8%DB%8C%D9%86%E2%80%8C%D8%B3%D9%88%D8%AF%D8%9B-%D8%B2%DB%8C%D8%B1%D8%B3%D8%A7%D8%AE%D8%AA%DB%8C-%D9%BE%D8%A7%DB%8C%D8%AF%D8%A7%D8%B1-%D8%A8%D8%B1%D8%A7%DB%8C-%D8%AA%D8%B1%DB%8C%D8%AF%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%DB%8C-%D8%AF%D8%B1-%D8%B9%D8%B5%D8%B1-%D8%A7%DB%8C%D9%86%D8%AA%D8%B1%D9%86%D8%AA-%D9%85%D9%84%DB%8C",
+    "finalUrl": "https://www.robinsood.com/articledetails/2137/%D9%BE%D9%84%D8%AA%D9%81%D8%B1%D9%85-%D9%85%D8%B9%D8%A7%D9%85%D9%84%D8%A7%D8%AA%DB%8C-%D8%A7%D8%AE%D8%AA%D8%B5%D8%A7%D8%B5%DB%8C-%D8%B1%D8%A7%D8%A8%DB%8C%D9%86%E2%80%8C%D8%B3%D9%88%D8%AF%D8%9B-%D8%B2%DB%8C%D8%B1%D8%B3%D8%A7%D8%AE%D8%AA%DB%8C-%D9%BE%D8%A7%DB%8C%D8%AF%D8%A7%D8%B1-%D8%A8%D8%B1%D8%A7%DB%8C-%D8%AA%D8%B1%DB%8C%D8%AF%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%DB%8C-%D8%AF%D8%B1-%D8%B9%D8%B5%D8%B1-%D8%A7%DB%8C%D9%86%D8%AA%D8%B1%D9%86%D8%AA-%D9%85%D9%84%DB%8C?utm_source=chavosh&utm_medium=chavosh&utm_campaign=fullfun_pro_chavosh_shahrivar_1405&utm_content=text_cr_260825_101625_18413fd9_v1",
+    "placement": "",
+    "publishDate": "2026-08-25",
+    "notes": "",
+    "createdBy": {
+      "username": "marketing",
+      "name": "مسئول مارکتینگ",
+      "role": "marketing"
+    },
+    "createdAt": "2026-08-25T10:24:12.118Z",
+    "status": "active",
+    "archivedAt": null,
+    "archivedBy": null,
+    "deletedAt": null,
+    "deletedBy": null
   }
 ]
