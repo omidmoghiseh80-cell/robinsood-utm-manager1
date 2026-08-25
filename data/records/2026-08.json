@@ -78,5 +78,45 @@
     "archivedBy": null,
     "deletedAt": null,
     "deletedBy": null
+  },
+  {
+    "id": "UTM-260825-041822-C649E3F3",
+    "campaign": {
+      "id": "CMP-260825-040435-CA37AC31",
+      "displayName": "پیام‌های متنی روزانه",
+      "value": "other_challenges_challenges_cost_ever_1405"
+    },
+    "source": {
+      "id": "SRC-260825-040736-7A5989EB",
+      "displayName": "robinsood_channel",
+      "value": "robinsood_channel"
+    },
+    "medium": {
+      "id": "MED-260825-040705-7B535FCC",
+      "displayName": "robinsood_channel",
+      "value": "robinsood_channel"
+    },
+    "creative": {
+      "id": "CR-260825-040046-DDF1BDDC",
+      "displayName": "پیام متنی کانال",
+      "value": "text_cr_260825_040046_ddf1bddc_v1"
+    },
+    "audience": null,
+    "destinationUrl": "https://pegah.robinsood.com/",
+    "finalUrl": "https://pegah.robinsood.com/?utm_source=robinsood_channel&utm_medium=robinsood_channel&utm_campaign=other_challenges_challenges_cost_ever_1405&utm_content=text_cr_260825_040046_ddf1bddc_v1",
+    "placement": "Telegram channel",
+    "publishDate": "2026-08-25",
+    "notes": "",
+    "createdBy": {
+      "username": "marketing",
+      "name": "مسئول مارکتینگ",
+      "role": "marketing"
+    },
+    "createdAt": "2026-08-25T04:18:22.597Z",
+    "status": "active",
+    "archivedAt": null,
+    "archivedBy": null,
+    "deletedAt": null,
+    "deletedBy": null
   }
 ]
