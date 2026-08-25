@@ -58,6 +58,20 @@
       "status": "active",
       "createdBy": "marketing",
       "createdAt": "2026-08-25T09:15:40.433Z"
+    },
+    {
+      "id": "CMP-260825-101424-53264E8F",
+      "displayName": "چاوش کمپین شهریور ماه",
+      "value": "fullfun_pro_chavosh_shahrivar_1405",
+      "product": "fullfun_pro",
+      "objective": "chavosh",
+      "period": "shahrivar",
+      "year": "1405",
+      "startDate": "2026-08-25",
+      "endDate": "2026-09-30",
+      "status": "active",
+      "createdBy": "marketing",
+      "createdAt": "2026-08-25T10:14:24.592Z"
     }
   ],
   "sources": [
