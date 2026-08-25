@@ -278,5 +278,45 @@
     "archivedBy": null,
     "deletedAt": null,
     "deletedBy": null
+  },
+  {
+    "id": "UTM-260825-091655-E22F4CDC",
+    "campaign": {
+      "id": "CMP-260825-091540-3723FD1E",
+      "displayName": "کمپین جذب فول فاند پرو و افزایش احراز هویت و ثبت نام شهریور",
+      "value": "w1_iran_broker_topic_shahrivar_1405"
+    },
+    "source": {
+      "id": "SRC-IRANBROKER",
+      "displayName": "IranBroker",
+      "value": "iranbroker"
+    },
+    "medium": {
+      "id": "MED-260825-091629-42946251",
+      "displayName": "ایران بروکر",
+      "value": "topic"
+    },
+    "creative": {
+      "id": "CR-260825-091651-2FF9319F",
+      "displayName": "تاپیک ایران بروکر",
+      "value": "text_cr_260825_091651_2ff9319f_v1"
+    },
+    "audience": null,
+    "destinationUrl": "https://www.robinsood.com/",
+    "finalUrl": "https://www.robinsood.com/?utm_source=iranbroker&utm_medium=topic&utm_campaign=w1_iran_broker_topic_shahrivar_1405&utm_content=text_cr_260825_091651_2ff9319f_v1",
+    "placement": "",
+    "publishDate": "2026-08-25",
+    "notes": "",
+    "createdBy": {
+      "username": "marketing",
+      "name": "مسئول مارکتینگ",
+      "role": "marketing"
+    },
+    "createdAt": "2026-08-25T09:16:55.479Z",
+    "status": "active",
+    "archivedAt": null,
+    "archivedBy": null,
+    "deletedAt": null,
+    "deletedBy": null
   }
 ]
