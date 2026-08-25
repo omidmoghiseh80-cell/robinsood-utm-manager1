@@ -293,6 +293,17 @@
       "status": "active",
       "createdBy": "marketing",
       "createdAt": "2026-08-25T08:48:09.167Z"
+    },
+    {
+      "id": "CR-260825-091651-2FF9319F",
+      "displayName": "تاپیک ایران بروکر",
+      "value": "text_cr_260825_091651_2ff9319f_v1",
+      "contentTypeId": "CT-TEXT",
+      "version": "v1",
+      "notes": "",
+      "status": "active",
+      "createdBy": "marketing",
+      "createdAt": "2026-08-25T09:16:51.281Z"
     }
   ],
   "audiences": []
