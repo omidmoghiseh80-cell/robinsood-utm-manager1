@@ -88,6 +88,14 @@
       "status": "active",
       "createdBy": "system",
       "createdAt": "2026-08-19T00:00:00Z"
+    },
+    {
+      "id": "SRC-260825-040736-7A5989EB",
+      "displayName": "robinsood_channel",
+      "value": "robinsood_channel",
+      "status": "active",
+      "createdBy": "marketing",
+      "createdAt": "2026-08-25T04:07:36.116Z"
     }
   ],
   "mediums": [
