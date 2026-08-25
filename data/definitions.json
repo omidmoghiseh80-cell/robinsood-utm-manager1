@@ -130,6 +130,14 @@
       "status": "active",
       "createdBy": "system",
       "createdAt": "2026-08-19T00:00:00Z"
+    },
+    {
+      "id": "MED-260825-040705-7B535FCC",
+      "displayName": "robinsood_channel",
+      "value": "robinsood_channel",
+      "status": "active",
+      "createdBy": "marketing",
+      "createdAt": "2026-08-25T04:07:05.239Z"
     }
   ],
   "contentTypes": [
