@@ -16,6 +16,20 @@
       "createdAt": "2026-08-19T07:32:28.290Z",
       "deletedAt": "2026-08-19T09:31:20.257Z",
       "deletedBy": "owner"
+    },
+    {
+      "id": "CMP-260825-040435-CA37AC31",
+      "displayName": "پیام‌های متنی روزانه",
+      "value": "other_challenges_challenges_cost_ever_1405",
+      "product": "other_challenges",
+      "objective": "challenges_cost",
+      "period": "ever",
+      "year": "1405",
+      "startDate": "2026-08-25",
+      "endDate": "2028-08-25",
+      "status": "active",
+      "createdBy": "marketing",
+      "createdAt": "2026-08-25T04:04:35.739Z"
     }
   ],
   "sources": [
