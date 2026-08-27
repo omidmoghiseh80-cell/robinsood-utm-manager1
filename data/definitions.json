@@ -358,6 +358,14 @@
       "status": "active",
       "createdBy": "owner",
       "createdAt": "2026-08-27T11:52:56.964Z"
+    },
+    {
+      "id": "MED-260827-115258-B8005969",
+      "displayName": "تبلیغات رسمی پلتفرم (مثل Telegram Ads)",
+      "value": "platform_ads",
+      "status": "active",
+      "createdBy": "owner",
+      "createdAt": "2026-08-27T11:52:58.557Z"
     }
   ],
   "contentTypes": [
