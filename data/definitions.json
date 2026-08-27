@@ -145,9 +145,11 @@
       "id": "SRC-NAJVA",
       "displayName": "Najva",
       "value": "najva",
-      "status": "active",
+      "status": "deleted",
       "createdBy": "system",
-      "createdAt": "2026-08-19T00:00:00Z"
+      "createdAt": "2026-08-19T00:00:00Z",
+      "deletedAt": "2026-08-27T11:52:10.703Z",
+      "deletedBy": "owner"
     },
     {
       "id": "SRC-260825-040736-7A5989EB",
