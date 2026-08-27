@@ -236,6 +236,14 @@
       "status": "active",
       "createdBy": "owner",
       "createdAt": "2026-08-27T11:52:49.133Z"
+    },
+    {
+      "id": "SRC-260827-115250-C6CF5E94",
+      "displayName": "پیامک — نجوا",
+      "value": "sms_najva",
+      "status": "active",
+      "createdBy": "owner",
+      "createdAt": "2026-08-27T11:52:50.647Z"
     }
   ],
   "mediums": [
