@@ -72,159 +72,32 @@ utm_term
 
 Sourceهای اولیه:
 
-```text
-telegram
-instagram
-iranbroker
-aparat
-google
-yektanet
-najva
-```
+- `telegram` — تلگرام
+- `instagram` — اینستاگرام
+- `bale` — بله
+- `rubika` — روبیکا
+- `rubino` — روبینو
+- `youtube` — یوتیوب
+- `aparat` — آپارات
+- `x` — ایکس
+- `google` — گوگل
+- `mercury` — ایمیل / پنل Mercury
+- `najva` — پیامک / پنل نجوا
+- `yektanet` — پیامک / پنل یکتانت
+- `robinsood.com` — وب‌سایت رابین‌سود
 
 Mediumهای اولیه:
 
-```text
-sms
-email
-native_paid
-referral
-video
-```
+- `owned_social` — سوشال رسانه‌های خودمان
+- `paid_social` — سوشال رسانه دیگران با پرداخت هزینه
+- `platform_ads` — تبلیغات رسمی خود پلتفرم مانند Telegram Ads
+- `display` — تبلیغات بنری
+- `cpc` — هزینه به‌ازای کلیک
+- `referral` — رفرال
+- `email` — ایمیل
+- `sms` — پیامک
 
-Audience اختیاری است.
-
----
-
-# استاندارد Campaign
-
-هنگام ساخت Campaign:
-
-```text
-Product
-Objective
-Period
-Year
-```
-
-سیستم خودش می‌سازد:
-
-```text
-product_objective_period_year
-```
-
-مثال:
-
-```text
-fullfund_pro_acquisition_shahrivar_1405
-```
-
----
-
-# Creative
-
-Creative یک موجودیت مستقل است.
-
-نمونه:
-
-```text
-Name:
-بنر اعتبار قانونی رابین‌سود
-
-Content Type:
-banner
-
-Version:
-v1
-```
-
-`utm_content` به‌صورت خودکار تولید می‌شود.
-
-اگر Creative یکسان دوباره منتشر شود:
-- Creative همان است.
-- `utm_content` همان است.
-- ولی UTM ID انتشار جدید متفاوت است.
-
----
-
-# ذخیره اطلاعات
-
-UTMها ماهانه نگهداری می‌شوند:
-
-```text
-data/records/2026-08.json
-data/records/2026-09.json
-...
-```
-
-کاربران داخلی پنل:
-
-```text
-data/auth/users.json
-```
-
-این فایل در Setup اولیه ایجاد می‌شود.
-
-**رمز عبور خام داخل GitHub ذخیره نمی‌شود.**
-
-Passwordها با PBKDF2-SHA256 و Salt مستقل Hash می‌شوند.
-
----
-
-# قبل از Deploy
-
-فایل زیر را باز کنید:
-
-```text
-wrangler.jsonc
-```
-
-این دو مقدار را با Repository خودتان جایگزین کنید:
-
-```json
-"GITHUB_OWNER": "CHANGE_ME",
-"GITHUB_REPO": "CHANGE_ME"
-```
-
-مثلاً:
-
-```json
-"GITHUB_OWNER": "robinsood",
-"GITHUB_REPO": "robinsood-utm-manager"
-```
-
-Repository می‌تواند و بهتر است Private باشد.
-
-Branch پیش‌فرض:
-
-```text
-main
-```
-
----
-
-# تنها GitHub Token پروژه
-
-فقط یک GitHub Token لازم است؛ مربوط به مدیر Repository.
-
-این Token داخل صفحه ورود کاربران وارد نمی‌شود.
-
-دسترسی لازم:
-
-```text
-Repository access:
-Only select repositories
-→ همین Repository
-
-Repository permissions:
-Contents → Read and write
-```
-
-این Token بعداً به عنوان Secret در Cloudflare تنظیم می‌شود.
-
----
-
-# Deploy روی Cloudflare Worker
+قاعده پیشنهادی: نام پنل ارسال در `utm_source` و نوع کانال در `utm_medium` ثبت می‌شود؛ مثال: `utm_source=mercury&utm_medium=email` یا `utm_source=najva&utm_medium=sms`.
 
 ## پیش‌نیاز
 
@@ -508,3 +381,10 @@ SECURITY.md
 - Backend امن اضافه شده.
 - GitHub Token فقط Server-side است.
 - دو کاربر دیگر هیچ دسترسی GitHub لازم ندارند.
+
+## رابط کاربری نسخه 1.3.0
+- فرم ساخت UTM ساده‌تر و خواناتر شده است.
+- برای Sourceهای ایمیل و پیامک، Medium مرتبط به‌صورت هوشمند انتخاب می‌شود.
+- گزینه CPR حذف شده و CPC برای تبلیغات کلیکی باقی مانده است.
+- چیدمان دسکتاپ و موبایل و پیش‌نمایش لینک بهینه شده است.
+

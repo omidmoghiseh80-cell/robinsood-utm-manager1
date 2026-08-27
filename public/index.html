@@ -109,6 +109,7 @@
       <header class="topbar">
         <button id="menuBtn" class="icon mobile">☰</button>
         <div class="heading">
+          <span class="eyebrow">RobinSood Marketing Tools</span>
           <h2 id="pageTitle">ساخت UTM</h2>
           <p id="pageSubtitle">لینک کمپین را استاندارد بساز و ذخیره کن.</p>
         </div>
@@ -119,14 +120,14 @@
         <div class="create-grid">
           <div class="panel">
             <div class="panel-head">
-              <div><h3>اطلاعات لینک</h3><p>قبل از ثبت، لینک نهایی را در ستون پیش‌نمایش بررسی کن.</p></div>
+              <div><span class="section-kicker">مرحله ۱</span><h3>مشخصات کمپین</h3><p>فقط موارد اصلی را انتخاب کن؛ لینک نهایی همزمان ساخته می‌شود.</p></div>
               <span class="pill">UTM Builder</span>
             </div>
 
             <form id="utmForm" class="stack">
               <div class="grid two">
                 <label class="field">
-                  <span>کمپین <i>*</i></span>
+                  <span>کمپین <i>*</i></span><small>کمپین اصلی این لینک</small>
                   <div class="select-add">
                     <select id="campaign" required></select>
                     <button type="button" class="plus" data-add="campaigns">＋</button>
@@ -134,7 +135,7 @@
                 </label>
 
                 <label class="field">
-                  <span>Source — محل انتشار <i>*</i></span>
+                  <span>Source <i>*</i></span><small>لینک کجا منتشر می‌شود؟</small>
                   <div class="select-add">
                     <select id="source" required></select>
                     <button type="button" class="plus" data-add="sources">＋</button>
@@ -142,7 +143,7 @@
                 </label>
 
                 <label class="field">
-                  <span>Medium — جنس تبلیغ <i>*</i></span>
+                  <span>Medium <i>*</i></span><small>نوع انتشار یا مدل تبلیغ</small>
                   <div class="select-add">
                     <select id="medium" required></select>
                     <button type="button" class="plus" data-add="mediums">＋</button>
@@ -150,7 +151,7 @@
                 </label>
 
                 <label class="field">
-                  <span>Creative <i>*</i></span>
+                  <span>Creative <i>*</i></span><small>نسخه محتوا یا خلاقه</small>
                   <div class="select-add">
                     <select id="creative" required></select>
                     <button type="button" class="plus" data-add="creatives">＋</button>
@@ -158,7 +159,7 @@
                 </label>
 
                 <label class="field">
-                  <span>Audience / Term</span>
+                  <span>Audience / Term</span><small>اختیاری؛ برای تفکیک مخاطب</small>
                   <div class="select-add">
                     <select id="audience"></select>
                     <button type="button" class="plus" data-add="audiences">＋</button>
@@ -166,39 +167,43 @@
                 </label>
 
                 <label class="field">
-                  <span>تاریخ انتشار</span>
+                  <span>تاریخ انتشار</span><small>زمان برنامه‌ریزی انتشار</small>
                   <input id="publishDate" type="date">
                 </label>
               </div>
 
               <label class="field">
-                <span>Destination URL <i>*</i></span>
+                <span>آدرس مقصد <i>*</i></span><small>URL صفحه‌ای که کاربر باید وارد آن شود</small>
                 <input id="destination" type="url" required placeholder="https://www.robinsood.com/...">
               </label>
 
               <div class="grid two">
                 <label class="field">
-                  <span>Placement / محل دقیق انتشار</span>
+                  <span>محل دقیق انتشار</span><small>مثلاً نام کانال، جایگاه یا ادست</small>
                   <input id="placement" placeholder="مثلاً Telegram Ads - Prop Audience 01">
                 </label>
                 <label class="field">
-                  <span>یادداشت</span>
+                  <span>یادداشت</span><small>اختیاری؛ فقط برای تیم داخلی</small>
                   <input id="notes" placeholder="اختیاری">
                 </label>
               </div>
 
-              <div class="warning">
-                <b>بعد از ثبت، UTM قابل ویرایش نیست.</b>
-                <span>اگر اشتباه باشد، رکورد قبلی Archive و لینک جدید ساخته می‌شود.</span>
+              <div id="channelHint" class="channel-hint">
+                <span class="hint-dot"></span>
+                <div><b>راهنمای انتخاب</b><span>Source و Medium را انتخاب کن تا راهنمای همان کانال نمایش داده شود.</span></div>
+              </div>
+              <div class="warning compact-warning">
+                <b>پس از ثبت، UTM قفل می‌شود.</b>
+                <span>در صورت اشتباه، رکورد قبلی Archive و لینک جدید ساخته می‌شود.</span>
               </div>
 
-              <button class="btn primary wide large" type="submit">ثبت و ساخت لینک UTM</button>
+              <button class="btn primary wide large build-btn" type="submit"><span>ساخت و ذخیره لینک</span><b>←</b></button>
             </form>
           </div>
 
           <aside class="panel preview">
             <div class="panel-head compact">
-              <div><h3>پیش‌نمایش</h3><p>مقادیر نهایی لینک</p></div>
+              <div><span class="section-kicker">مرحله ۲</span><h3>پیش‌نمایش لینک</h3><p>قبل از ذخیره، خروجی را یک‌بار چک کن.</p></div>
             </div>
             <div class="kv">
               <div><span>Campaign</span><b id="pvCampaign">—</b></div>
@@ -211,7 +216,7 @@
               <span>Final URL</span>
               <code id="pvUrl">لینک مقصد را وارد کنید...</code>
             </div>
-            <button id="copyPreview" class="btn secondary wide" type="button">کپی لینک پیش‌نمایش</button>
+            <button id="copyPreview" class="btn secondary wide copy-btn" type="button">کپی لینک پیش‌نمایش</button>
           </aside>
         </div>
       </section>

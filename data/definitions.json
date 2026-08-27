@@ -1,387 +1,176 @@
 {
   "schemaVersion": 1,
-  "campaigns": [
-    {
-      "id": "CMP-260819-073228-B8679789",
-      "displayName": "کمپین شهریور ماه 1405",
-      "value": "pro_jazb_shahrivar_1405",
-      "product": "pro",
-      "objective": "jazb",
-      "period": "shahrivar",
-      "year": "1405",
-      "startDate": "2026-08-23",
-      "endDate": "2026-09-23",
-      "status": "deleted",
-      "createdBy": "owner",
-      "createdAt": "2026-08-19T07:32:28.290Z",
-      "deletedAt": "2026-08-19T09:31:20.257Z",
-      "deletedBy": "owner"
-    },
-    {
-      "id": "CMP-260825-040435-CA37AC31",
-      "displayName": "پیام‌های متنی روزانه",
-      "value": "other_challenges_challenges_cost_ever_1405",
-      "product": "other_challenges",
-      "objective": "challenges_cost",
-      "period": "ever",
-      "year": "1405",
-      "startDate": "2026-08-25",
-      "endDate": "2028-08-25",
-      "status": "active",
-      "createdBy": "marketing",
-      "createdAt": "2026-08-25T04:04:35.739Z"
-    },
-    {
-      "id": "CMP-260825-084630-4096D1CA",
-      "displayName": "گزارش خبری عصر قلم",
-      "value": "robinsood_report_shahrivar_1405",
-      "product": "robinsood",
-      "objective": "report",
-      "period": "shahrivar",
-      "year": "1405",
-      "startDate": "2026-08-25",
-      "endDate": "2027-08-25",
-      "status": "active",
-      "createdBy": "marketing",
-      "createdAt": "2026-08-25T08:46:30.212Z"
-    },
-    {
-      "id": "CMP-260825-091540-3723FD1E",
-      "displayName": "کمپین جذب فول فاند پرو و افزایش احراز هویت و ثبت نام شهریور",
-      "value": "w1_iran_broker_topic_shahrivar_1405",
-      "product": "w1",
-      "objective": "iran_broker_topic",
-      "period": "shahrivar",
-      "year": "1405",
-      "startDate": "2026-08-25",
-      "endDate": "2026-08-31",
-      "status": "active",
-      "createdBy": "marketing",
-      "createdAt": "2026-08-25T09:15:40.433Z"
-    },
-    {
-      "id": "CMP-260825-101424-53264E8F",
-      "displayName": "چاوش کمپین شهریور ماه",
-      "value": "fullfun_pro_chavosh_shahrivar_1405",
-      "product": "fullfun_pro",
-      "objective": "chavosh",
-      "period": "shahrivar",
-      "year": "1405",
-      "startDate": "2026-08-25",
-      "endDate": "2026-09-30",
-      "status": "active",
-      "createdBy": "marketing",
-      "createdAt": "2026-08-25T10:14:24.592Z"
-    },
-    {
-      "id": "CMP-260827-085606-E8BBADD6",
-      "displayName": "کمپین ایمیل مارکتینگ",
-      "value": "fullfundpro_lead_aug26_shahrivar_1405",
-      "product": "fullfundpro",
-      "objective": "lead_aug26",
-      "period": "shahrivar",
-      "year": "1405",
-      "startDate": null,
-      "endDate": null,
-      "status": "active",
-      "createdBy": "owner",
-      "createdAt": "2026-08-27T08:56:06.570Z"
-    }
-  ],
+  "campaigns": [],
   "sources": [
     {
       "id": "SRC-TELEGRAM",
-      "displayName": "Telegram",
+      "displayName": "تلگرام",
       "value": "telegram",
       "status": "active",
       "createdBy": "system",
-      "createdAt": "2026-08-19T00:00:00Z"
+      "createdAt": "2026-08-27T00:00:00Z"
     },
     {
       "id": "SRC-INSTAGRAM",
-      "displayName": "Instagram",
+      "displayName": "اینستاگرام",
       "value": "instagram",
       "status": "active",
       "createdBy": "system",
-      "createdAt": "2026-08-19T00:00:00Z"
+      "createdAt": "2026-08-27T00:00:00Z"
     },
     {
-      "id": "SRC-IRANBROKER",
-      "displayName": "IranBroker",
-      "value": "iranbroker",
-      "status": "deleted",
-      "createdBy": "system",
-      "createdAt": "2026-08-19T00:00:00Z",
-      "deletedAt": "2026-08-27T11:51:54.272Z",
-      "deletedBy": "owner"
-    },
-    {
-      "id": "SRC-APARAT",
-      "displayName": "Aparat",
-      "value": "aparat",
-      "status": "active",
-      "createdBy": "system",
-      "createdAt": "2026-08-19T00:00:00Z"
-    },
-    {
-      "id": "SRC-GOOGLE",
-      "displayName": "Google",
-      "value": "google",
-      "status": "active",
-      "createdBy": "system",
-      "createdAt": "2026-08-19T00:00:00Z"
-    },
-    {
-      "id": "SRC-YEKTANET",
-      "displayName": "Yektanet",
-      "value": "yektanet",
-      "status": "deleted",
-      "createdBy": "system",
-      "createdAt": "2026-08-19T00:00:00Z",
-      "deletedAt": "2026-08-27T11:52:05.390Z",
-      "deletedBy": "owner"
-    },
-    {
-      "id": "SRC-NAJVA",
-      "displayName": "Najva",
-      "value": "najva",
-      "status": "deleted",
-      "createdBy": "system",
-      "createdAt": "2026-08-19T00:00:00Z",
-      "deletedAt": "2026-08-27T11:52:10.703Z",
-      "deletedBy": "owner"
-    },
-    {
-      "id": "SRC-260825-040736-7A5989EB",
-      "displayName": "robinsood_channel",
-      "value": "robinsood_channel",
-      "status": "active",
-      "createdBy": "marketing",
-      "createdAt": "2026-08-25T04:07:36.116Z"
-    },
-    {
-      "id": "SRC-260825-084745-DB702A58",
-      "displayName": "عصر قلم",
-      "value": "report",
-      "status": "deleted",
-      "createdBy": "marketing",
-      "createdAt": "2026-08-25T08:47:45.138Z",
-      "deletedAt": "2026-08-27T11:52:20.030Z",
-      "deletedBy": "owner"
-    },
-    {
-      "id": "SRC-260825-101513-C38B013A",
-      "displayName": "CHAVOSH",
-      "value": "chavosh",
-      "status": "deleted",
-      "createdBy": "marketing",
-      "createdAt": "2026-08-25T10:15:13.819Z",
-      "deletedAt": "2026-08-27T11:52:26.277Z",
-      "deletedBy": "owner"
-    },
-    {
-      "id": "SRC-260827-085808-58AE989F",
-      "displayName": "سایت نجوا",
-      "value": "site-https_app_cmercury_com",
-      "status": "deleted",
-      "createdBy": "owner",
-      "createdAt": "2026-08-27T08:58:08.597Z",
-      "deletedAt": "2026-08-27T11:52:33.905Z",
-      "deletedBy": "owner"
-    },
-    {
-      "id": "SRC-260827-115240-DAB37F5B",
+      "id": "SRC-BALE",
       "displayName": "بله",
       "value": "bale",
       "status": "active",
-      "createdBy": "owner",
-      "createdAt": "2026-08-27T11:52:40.568Z"
+      "createdBy": "system",
+      "createdAt": "2026-08-27T00:00:00Z"
     },
     {
-      "id": "SRC-260827-115242-67F8688B",
+      "id": "SRC-RUBIKA",
       "displayName": "روبیکا",
       "value": "rubika",
       "status": "active",
-      "createdBy": "owner",
-      "createdAt": "2026-08-27T11:52:42.005Z"
+      "createdBy": "system",
+      "createdAt": "2026-08-27T00:00:00Z"
     },
     {
-      "id": "SRC-260827-115243-B1889E71",
+      "id": "SRC-RUBINO",
       "displayName": "روبینو",
       "value": "rubino",
       "status": "active",
-      "createdBy": "owner",
-      "createdAt": "2026-08-27T11:52:43.649Z"
+      "createdBy": "system",
+      "createdAt": "2026-08-27T00:00:00Z"
     },
     {
-      "id": "SRC-260827-115245-CFDF4A32",
+      "id": "SRC-YOUTUBE",
       "displayName": "یوتیوب",
       "value": "youtube",
       "status": "active",
-      "createdBy": "owner",
-      "createdAt": "2026-08-27T11:52:45.091Z"
+      "createdBy": "system",
+      "createdAt": "2026-08-27T00:00:00Z"
     },
     {
-      "id": "SRC-260827-115246-2721543B",
+      "id": "SRC-APARAT",
+      "displayName": "آپارات",
+      "value": "aparat",
+      "status": "active",
+      "createdBy": "system",
+      "createdAt": "2026-08-27T00:00:00Z"
+    },
+    {
+      "id": "SRC-X",
       "displayName": "ایکس (X)",
       "value": "x",
       "status": "active",
-      "createdBy": "owner",
-      "createdAt": "2026-08-27T11:52:46.589Z"
+      "createdBy": "system",
+      "createdAt": "2026-08-27T00:00:00Z"
     },
     {
-      "id": "SRC-260827-115249-348ED154",
-      "displayName": "ایمیل — Cmercury",
-      "value": "email_cmercury",
+      "id": "SRC-GOOGLE",
+      "displayName": "گوگل",
+      "value": "google",
       "status": "active",
-      "createdBy": "owner",
-      "createdAt": "2026-08-27T11:52:49.133Z"
+      "createdBy": "system",
+      "createdAt": "2026-08-27T00:00:00Z"
     },
     {
-      "id": "SRC-260827-115250-C6CF5E94",
+      "id": "SRC-EMAIL-MERCURY",
+      "displayName": "ایمیل — Mercury",
+      "value": "mercury",
+      "status": "active",
+      "createdBy": "system",
+      "createdAt": "2026-08-27T00:00:00Z"
+    },
+    {
+      "id": "SRC-SMS-NAJVA",
       "displayName": "پیامک — نجوا",
-      "value": "sms_najva",
+      "value": "najva",
       "status": "active",
-      "createdBy": "owner",
-      "createdAt": "2026-08-27T11:52:50.647Z"
+      "createdBy": "system",
+      "createdAt": "2026-08-27T00:00:00Z"
     },
     {
-      "id": "SRC-260827-115252-8DADD5C2",
+      "id": "SRC-SMS-YEKTANET",
       "displayName": "پیامک — یکتانت",
-      "value": "sms_yektanet",
+      "value": "yektanet",
       "status": "active",
-      "createdBy": "owner",
-      "createdAt": "2026-08-27T11:52:52.390Z"
+      "createdBy": "system",
+      "createdAt": "2026-08-27T00:00:00Z"
     },
     {
-      "id": "SRC-260827-115253-07D4CC15",
+      "id": "SRC-WEBSITE-ROBINSOOD",
       "displayName": "وب‌سایت رابین‌سود",
-      "value": "robinsood_com",
+      "value": "robinsood.com",
       "status": "active",
-      "createdBy": "owner",
-      "createdAt": "2026-08-27T11:52:53.978Z"
+      "createdBy": "system",
+      "createdAt": "2026-08-27T00:00:00Z"
     }
   ],
   "mediums": [
     {
-      "id": "MED-SMS",
-      "displayName": "SMS",
-      "value": "sms",
-      "status": "active",
-      "createdBy": "system",
-      "createdAt": "2026-08-19T00:00:00Z"
-    },
-    {
-      "id": "MED-EMAIL",
-      "displayName": "Email",
-      "value": "email",
-      "status": "active",
-      "createdBy": "system",
-      "createdAt": "2026-08-19T00:00:00Z"
-    },
-    {
-      "id": "MED-NATIVE-PAID",
-      "displayName": "Native Paid",
-      "value": "native_paid",
-      "status": "active",
-      "createdBy": "system",
-      "createdAt": "2026-08-19T00:00:00Z"
-    },
-    {
-      "id": "MED-REFERRAL",
-      "displayName": "Referral",
-      "value": "referral",
-      "status": "active",
-      "createdBy": "system",
-      "createdAt": "2026-08-19T00:00:00Z"
-    },
-    {
-      "id": "MED-VIDEO",
-      "displayName": "Video",
-      "value": "video",
-      "status": "active",
-      "createdBy": "system",
-      "createdAt": "2026-08-19T00:00:00Z"
-    },
-    {
-      "id": "MED-260825-040705-7B535FCC",
-      "displayName": "robinsood_channel",
-      "value": "robinsood_channel",
-      "status": "active",
-      "createdBy": "marketing",
-      "createdAt": "2026-08-25T04:07:05.239Z"
-    },
-    {
-      "id": "MED-260825-084708-CE8E74A3",
-      "displayName": "ریپورتاژ",
-      "value": "report",
-      "status": "active",
-      "createdBy": "marketing",
-      "createdAt": "2026-08-25T08:47:08.459Z"
-    },
-    {
-      "id": "MED-260825-091629-42946251",
-      "displayName": "ایران بروکر",
-      "value": "topic",
-      "status": "active",
-      "createdBy": "marketing",
-      "createdAt": "2026-08-25T09:16:29.232Z"
-    },
-    {
-      "id": "MED-260825-101544-73583EE0",
-      "displayName": "CHAVOSH",
-      "value": "chavosh",
-      "status": "active",
-      "createdBy": "marketing",
-      "createdAt": "2026-08-25T10:15:44.932Z"
-    },
-    {
-      "id": "MED-260827-085953-F9E1888A",
-      "displayName": "رفرال",
-      "value": "paid_referral",
-      "status": "active",
-      "createdBy": "owner",
-      "createdAt": "2026-08-27T08:59:53.340Z"
-    },
-    {
-      "id": "MED-260827-115255-F3CA1EA7",
+      "id": "MED-OWNED-SOCIAL",
       "displayName": "سوشال — رسانه‌های خودمان",
       "value": "owned_social",
       "status": "active",
-      "createdBy": "owner",
-      "createdAt": "2026-08-27T11:52:55.489Z"
+      "createdBy": "system",
+      "createdAt": "2026-08-27T00:00:00Z"
     },
     {
-      "id": "MED-260827-115256-5581F2FA",
-      "displayName": "سوشال — رسانه‌های دیگران / پولی",
+      "id": "MED-PAID-SOCIAL",
+      "displayName": "سوشال — رسانه دیگران (تبلیغ پولی)",
       "value": "paid_social",
       "status": "active",
-      "createdBy": "owner",
-      "createdAt": "2026-08-27T11:52:56.964Z"
+      "createdBy": "system",
+      "createdAt": "2026-08-27T00:00:00Z"
     },
     {
-      "id": "MED-260827-115258-B8005969",
-      "displayName": "تبلیغات رسمی پلتفرم (مثل Telegram Ads)",
+      "id": "MED-PLATFORM-ADS",
+      "displayName": "سوشال رسمی / تبلیغات پلتفرمی",
       "value": "platform_ads",
       "status": "active",
-      "createdBy": "owner",
-      "createdAt": "2026-08-27T11:52:58.557Z"
+      "createdBy": "system",
+      "createdAt": "2026-08-27T00:00:00Z"
     },
     {
-      "id": "MED-260827-115259-B1756593",
+      "id": "MED-DISPLAY",
       "displayName": "تبلیغات بنری",
       "value": "display",
       "status": "active",
-      "createdBy": "owner",
-      "createdAt": "2026-08-27T11:52:59.934Z"
+      "createdBy": "system",
+      "createdAt": "2026-08-27T00:00:00Z"
     },
     {
-      "id": "MED-260827-115301-AA9591A2",
-      "displayName": "تبلیغات عملکردی — CPR",
-      "value": "cpr",
+      "id": "MED-CPC",
+      "displayName": "هزینه به‌ازای کلیک (CPC)",
+      "value": "cpc",
       "status": "active",
-      "createdBy": "owner",
-      "createdAt": "2026-08-27T11:53:01.370Z"
+      "createdBy": "system",
+      "createdAt": "2026-08-27T00:00:00Z"
+    },
+    {
+      "id": "MED-REFERRAL",
+      "displayName": "رفرال",
+      "value": "referral",
+      "status": "active",
+      "createdBy": "system",
+      "createdAt": "2026-08-27T00:00:00Z"
+    },
+    {
+      "id": "MED-EMAIL",
+      "displayName": "ایمیل",
+      "value": "email",
+      "status": "active",
+      "createdBy": "system",
+      "createdAt": "2026-08-27T00:00:00Z"
+    },
+    {
+      "id": "MED-SMS",
+      "displayName": "پیامک",
+      "value": "sms",
+      "status": "active",
+      "createdBy": "system",
+      "createdAt": "2026-08-27T00:00:00Z"
     }
   ],
   "contentTypes": [
@@ -442,75 +231,6 @@
       "createdAt": "2026-08-19T00:00:00Z"
     }
   ],
-  "creatives": [
-    {
-      "id": "CR-260819-073428-9CBC6708",
-      "displayName": "بنر 100 میلیون جایزه رایگان",
-      "value": "banner_cr_260819_073428_9cbc6708_v1",
-      "contentTypeId": "CT-BANNER",
-      "version": "v1",
-      "notes": "",
-      "status": "deleted",
-      "createdBy": "owner",
-      "createdAt": "2026-08-19T07:34:28.874Z",
-      "deletedAt": "2026-08-19T09:31:30.138Z",
-      "deletedBy": "owner"
-    },
-    {
-      "id": "CR-260825-040046-DDF1BDDC",
-      "displayName": "پیام متنی کانال",
-      "value": "text_cr_260825_040046_ddf1bddc_v1",
-      "contentTypeId": "CT-TEXT",
-      "version": "v1",
-      "notes": "",
-      "status": "active",
-      "createdBy": "marketing",
-      "createdAt": "2026-08-25T04:00:46.438Z"
-    },
-    {
-      "id": "CR-260825-084809-D27D6486",
-      "displayName": "لینک داخلی ریپورتاژ",
-      "value": "text_cr_260825_084809_d27d6486_v1",
-      "contentTypeId": "CT-TEXT",
-      "version": "v1",
-      "notes": "",
-      "status": "active",
-      "createdBy": "marketing",
-      "createdAt": "2026-08-25T08:48:09.167Z"
-    },
-    {
-      "id": "CR-260825-091651-2FF9319F",
-      "displayName": "تاپیک ایران بروکر",
-      "value": "text_cr_260825_091651_2ff9319f_v1",
-      "contentTypeId": "CT-TEXT",
-      "version": "v1",
-      "notes": "",
-      "status": "active",
-      "createdBy": "marketing",
-      "createdAt": "2026-08-25T09:16:51.281Z"
-    },
-    {
-      "id": "CR-260825-101625-18413FD9",
-      "displayName": "لینک داخلی لندینگ چاوش",
-      "value": "text_cr_260825_101625_18413fd9_v1",
-      "contentTypeId": "CT-TEXT",
-      "version": "v1",
-      "notes": "",
-      "status": "active",
-      "createdBy": "marketing",
-      "createdAt": "2026-08-25T10:16:25.255Z"
-    },
-    {
-      "id": "CR-260827-090942-2D63B607",
-      "displayName": "لندینگ بعد از رونمایی فول فاند پرو",
-      "value": "banner_cr_260827_090942_2d63b607_v1",
-      "contentTypeId": "CT-BANNER",
-      "version": "v1",
-      "notes": "فایل لندینگ رو خانم دهقان داره",
-      "status": "active",
-      "createdBy": "owner",
-      "createdAt": "2026-08-27T09:09:42.013Z"
-    }
-  ],
+  "creatives": [],
   "audiences": []
 }

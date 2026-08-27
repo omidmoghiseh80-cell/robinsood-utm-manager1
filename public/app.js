@@ -13,34 +13,6 @@ const S = {
   pageSize: 25
 };
 
-// RobinSood canonical UTM defaults.
-// These values are synced once for the Owner and never overwrite/archive existing definitions.
-const DEFAULT_DEFINITIONS = {
-  sources: [
-    {displayName:"تلگرام", value:"telegram"},
-    {displayName:"اینستاگرام", value:"instagram"},
-    {displayName:"بله", value:"bale"},
-    {displayName:"روبیکا", value:"rubika"},
-    {displayName:"روبینو", value:"rubino"},
-    {displayName:"یوتیوب", value:"youtube"},
-    {displayName:"آپارات", value:"aparat"},
-    {displayName:"ایکس (X)", value:"x"},
-    {displayName:"گوگل", value:"google"},
-    {displayName:"ایمیل — Cmercury", value:"email_cmercury"},
-    {displayName:"پیامک — نجوا", value:"sms_najva"},
-    {displayName:"پیامک — یکتانت", value:"sms_yektanet"},
-    {displayName:"وب‌سایت رابین‌سود", value:"robinsood.com"}
-  ],
-  mediums: [
-    {displayName:"سوشال — رسانه‌های خودمان", value:"owned_social"},
-    {displayName:"سوشال — رسانه‌های دیگران / پولی", value:"paid_social"},
-    {displayName:"تبلیغات رسمی پلتفرم (مثل Telegram Ads)", value:"platform_ads"},
-    {displayName:"تبلیغات بنری", value:"display"},
-    {displayName:"تبلیغات عملکردی — CPR", value:"cpr"},
-    {displayName:"رفرال", value:"referral"}
-  ]
-};
-
 const $ = id => document.getElementById(id);
 const $$ = (q, r=document) => [...r.querySelectorAll(q)];
 const esc = s => String(s ?? "").replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
@@ -221,20 +193,9 @@ async function enterApp() {
 async function refresh() {
   loading(true);
   try {
-    let data = await api("/api/state");
+    const data = await api("/api/state");
     S.me = data.me;
     S.defs = data.definitions;
-
-    // Seed missing RobinSood defaults only for Owner. Existing definitions are preserved.
-    if (isOwner()) {
-      const added = await ensureDefaultDefinitions();
-      if (added) {
-        data = await api("/api/state");
-        S.me = data.me;
-        S.defs = data.definitions;
-      }
-    }
-
     S.records = data.records || [];
     S.users = data.users || [];
     fillBuilder();
@@ -247,33 +208,6 @@ async function refresh() {
   } finally {
     loading(false);
   }
-}
-
-async function ensureDefaultDefinitions() {
-  let added = 0;
-
-  for (const [type, presets] of Object.entries(DEFAULT_DEFINITIONS)) {
-    const existing = S.defs?.[type] || [];
-    const existingValues = new Set(existing.map(x => String(x.value || "").trim().toLowerCase()));
-
-    for (const preset of presets) {
-      if (existingValues.has(preset.value.toLowerCase())) continue;
-      try {
-        await api(`/api/definitions/${encodeURIComponent(type)}`, {
-          method:"POST",
-          body:JSON.stringify(preset)
-        });
-        existingValues.add(preset.value.toLowerCase());
-        added++;
-      } catch (e) {
-        // A concurrent insert or server-side duplicate check should not break the app.
-        if (![400, 409].includes(e.status)) throw e;
-      }
-    }
-  }
-
-  if (added) toast(`${added} پیش‌فرض استاندارد UTM اضافه شد.`);
-  return added;
 }
 
 const META = {
@@ -316,7 +250,39 @@ function fillBuilder() {
   fillSelect("creative","creatives","Creative");
   fillSelect("audience","audiences","بدون Audience",true);
   $$(".plus").forEach(btn => btn.classList.toggle("hidden", !canCreateDefinitions()));
+  updateChannelHint();
   preview();
+}
+
+function smartMediumForSource() {
+  const source = def("sources", $("source").value);
+  if (!source) return;
+  const autoMap = {mercury:"email", najva:"sms", yektanet:"sms"};
+  const mediumValue = autoMap[source.value];
+  if (!mediumValue) return;
+  const match = active("mediums").find(x => x.value === mediumValue);
+  if (match) $("medium").value = match.id;
+}
+
+function updateChannelHint() {
+  const box = $("channelHint");
+  if (!box) return;
+  const source = def("sources", $("source").value);
+  const medium = def("mediums", $("medium").value);
+  const rules = {
+    owned_social:"برای انتشار در رسانه‌های رسمی خود رابین‌سود استفاده کن.",
+    paid_social:"برای تبلیغ پولی در کانال، پیج یا رسانه شخص ثالث استفاده کن.",
+    platform_ads:"برای تبلیغات رسمی خود پلتفرم‌ها مثل Telegram Ads استفاده کن.",
+    display:"برای بنر و جایگاه‌های تبلیغات نمایشی در وب‌سایت‌ها استفاده کن.",
+    cpc:"برای کمپین‌هایی که خرید تبلیغ بر مبنای کلیک است استفاده کن.",
+    referral:"برای لینک معرفی، همکاری، شریک تجاری یا ارجاع از سایت دیگر استفاده کن.",
+    email:"برای لینک‌های داخل ایمیل استفاده کن؛ پنل ارسال در Source مشخص می‌شود.",
+    sms:"برای لینک‌های داخل پیامک استفاده کن؛ پنل ارسال در Source مشخص می‌شود."
+  };
+  const title = source ? `${source.displayName}${medium ? ` + ${medium.displayName}` : ""}` : "راهنمای انتخاب";
+  const text = medium ? (rules[medium.value] || "این ترکیب برای لینک شما ثبت می‌شود.") : "Source و Medium را انتخاب کن تا راهنمای همان کانال نمایش داده شود.";
+  box.querySelector("b").textContent = title;
+  box.querySelector("div > span").textContent = text;
 }
 function fillFilters() {
   [
@@ -819,7 +785,8 @@ function bind() {
   $$(".nav").forEach(btn => btn.onclick = () => show(btn.dataset.view));
   $("utmForm").onsubmit = createUtm;
 
-  ["campaign","source","medium","creative","audience","destination"].forEach(id => $(id).oninput = preview);
+  ["campaign","medium","creative","audience","destination"].forEach(id => $(id).oninput = () => { updateChannelHint(); preview(); });
+  $("source").oninput = () => { smartMediumForSource(); updateChannelHint(); preview(); };
   $("copyPreview").onclick = async () => {
     const url = buildPreviewUrl();
     if (!url) return toast("لینک معتبر ساخته نشده.","bad");
