@@ -183,9 +183,11 @@
       "id": "SRC-260827-085808-58AE989F",
       "displayName": "سایت نجوا",
       "value": "site-https_app_cmercury_com",
-      "status": "active",
+      "status": "deleted",
       "createdBy": "owner",
-      "createdAt": "2026-08-27T08:58:08.597Z"
+      "createdAt": "2026-08-27T08:58:08.597Z",
+      "deletedAt": "2026-08-27T11:52:33.905Z",
+      "deletedBy": "owner"
     }
   ],
   "mediums": [
