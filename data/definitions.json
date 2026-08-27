@@ -350,6 +350,14 @@
       "status": "active",
       "createdBy": "owner",
       "createdAt": "2026-08-27T11:52:55.489Z"
+    },
+    {
+      "id": "MED-260827-115256-5581F2FA",
+      "displayName": "سوشال — رسانه‌های دیگران / پولی",
+      "value": "paid_social",
+      "status": "active",
+      "createdBy": "owner",
+      "createdAt": "2026-08-27T11:52:56.964Z"
     }
   ],
   "contentTypes": [
