@@ -105,6 +105,14 @@
       "status": "active",
       "createdBy": "system",
       "createdAt": "2026-08-27T00:00:00Z"
+    },
+    {
+      "id": "SRC-260827-125023-1FAEFBFB",
+      "displayName": "سایت نجوا",
+      "value": "site-https_app_cmercury_com",
+      "status": "active",
+      "createdBy": "owner",
+      "createdAt": "2026-08-27T12:50:23.679Z"
     }
   ],
   "mediums": [
