@@ -228,6 +228,14 @@
       "status": "active",
       "createdBy": "owner",
       "createdAt": "2026-08-27T11:52:46.589Z"
+    },
+    {
+      "id": "SRC-260827-115249-348ED154",
+      "displayName": "ایمیل — Cmercury",
+      "value": "email_cmercury",
+      "status": "active",
+      "createdBy": "owner",
+      "createdAt": "2026-08-27T11:52:49.133Z"
     }
   ],
   "mediums": [
