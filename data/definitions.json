@@ -229,6 +229,14 @@
       "status": "active",
       "createdBy": "system",
       "createdAt": "2026-08-19T00:00:00Z"
+    },
+    {
+      "id": "CT-260827-124724-E0E58232",
+      "displayName": "landing",
+      "value": "landing",
+      "status": "active",
+      "createdBy": "owner",
+      "createdAt": "2026-08-27T12:47:24.324Z"
     }
   ],
   "creatives": [],
