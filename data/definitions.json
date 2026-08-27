@@ -1,21 +1,6 @@
 {
   "schemaVersion": 1,
-  "campaigns": [
-    {
-      "id": "CMP-260827-124023-89A94BB0",
-      "displayName": "کمپین ایمیل مارکتینگ",
-      "value": "fullfundpro_lead_aug26_shahrivar_1405",
-      "product": "fullfundpro",
-      "objective": "lead_aug26",
-      "period": "shahrivar",
-      "year": "1405",
-      "startDate": null,
-      "endDate": null,
-      "status": "active",
-      "createdBy": "owner",
-      "createdAt": "2026-08-27T12:40:23.993Z"
-    }
-  ],
+  "campaigns": [],
   "sources": [
     {
       "id": "SRC-TELEGRAM",
@@ -244,28 +229,8 @@
       "status": "active",
       "createdBy": "system",
       "createdAt": "2026-08-19T00:00:00Z"
-    },
-    {
-      "id": "CT-260827-123300-59EF956E",
-      "displayName": "landing",
-      "value": "landing",
-      "status": "active",
-      "createdBy": "owner",
-      "createdAt": "2026-08-27T12:33:00.123Z"
     }
   ],
-  "creatives": [
-    {
-      "id": "CR-260827-123456-4C7E9E25",
-      "displayName": "لندینگ بعد از رونمایی فول فاند پرو",
-      "value": "landing_cr_260827_123456_4c7e9e25_v1",
-      "contentTypeId": "CT-260827-123300-59EF956E",
-      "version": "v1",
-      "notes": "فایل لندینگ رو خانم دهقان داره",
-      "status": "active",
-      "createdBy": "owner",
-      "createdAt": "2026-08-27T12:34:56.455Z"
-    }
-  ],
+  "creatives": [],
   "audiences": []
 }

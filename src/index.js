@@ -48,7 +48,7 @@ async function apiRouter(request, env, url) {
 
     const body = await requestJson(request);
     if (!(await secureTextEqual(String(body.bootstrapSecret || ""), String(env.BOOTSTRAP_SECRET || "")))) {
-      return json({ error: "Bootstrap Secret نادرست است." }, 401);
+      return json({ error: "Bootstrap Secret نادرست است.", code: "BOOTSTRAP_INVALID" }, 401);
     }
 
     const supplied = Array.isArray(body.users) ? body.users : [];
@@ -97,7 +97,7 @@ async function apiRouter(request, env, url) {
 
     const user = (usersFile.json.users || []).find(u => u.username === username && u.active);
     const valid = user ? await verifyPassword(password, user.password) : false;
-    if (!valid) return json({ error: "نام کاربری یا رمز عبور صحیح نیست." }, 401);
+    if (!valid) return json({ error: "نام کاربری یا رمز عبور صحیح نیست.", code: "LOGIN_INVALID" }, 401);
 
     const token = await signSession(env, {
       sub: user.username,
@@ -425,14 +425,14 @@ async function apiRouter(request, env, url) {
 
 async function authenticate(request, env) {
   const header = request.headers.get("Authorization") || "";
-  if (!header.startsWith("Bearer ")) return { ok: false, response: json({ error: "نیاز به ورود دارید." }, 401) };
+  if (!header.startsWith("Bearer ")) return { ok: false, response: json({ error: "نیاز به ورود دارید.", code: "AUTH_REQUIRED" }, 401) };
   const token = header.slice(7).trim();
   const payload = await verifySession(env, token);
-  if (!payload) return { ok: false, response: json({ error: "Session معتبر نیست یا منقضی شده است." }, 401) };
+  if (!payload) return { ok: false, response: json({ error: "Session معتبر نیست یا منقضی شده است.", code: "SESSION_INVALID" }, 401) };
 
   const usersFile = await ghReadJson(env, PATHS.USERS, true);
   const user = usersFile?.json?.users?.find(u => u.username === payload.sub && u.active);
-  if (!user) return { ok: false, response: json({ error: "حساب کاربری فعال نیست." }, 401) };
+  if (!user) return { ok: false, response: json({ error: "حساب کاربری فعال نیست.", code: "ACCOUNT_INACTIVE" }, 401) };
   return { ok: true, user };
 }
 

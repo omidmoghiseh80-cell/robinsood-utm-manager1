@@ -37,24 +37,33 @@ async function api(path, options={}) {
   const headers = { ...(options.headers || {}) };
   if (!(options.body instanceof FormData) && options.body && !headers["Content-Type"]) headers["Content-Type"] = "application/json";
   if (S.token) headers.Authorization = `Bearer ${S.token}`;
+
   const response = await fetch(path, { ...options, headers });
-  if (response.status === 401 && path !== "/api/login") {
-    clearSession();
-    showLogin();
-    throw new Error("Session منقضی شده؛ دوباره وارد شو.");
+  const type = response.headers.get("content-type") || "";
+  let data = null;
+  if (type.includes("application/json")) {
+    try { data = await response.json(); } catch {}
   }
+
   if (!response.ok) {
-    let message = response.statusText;
-    try {
-      const data = await response.json();
-      message = data.error || message;
-    } catch {}
+    const code = data?.code || "";
+    const sessionCodes = new Set(["AUTH_REQUIRED", "SESSION_INVALID", "SESSION_EXPIRED", "ACCOUNT_INACTIVE"]);
+    const isRealSessionFailure = response.status === 401 && path !== "/api/login" && sessionCodes.has(code);
+
+    if (isRealSessionFailure) {
+      clearSession();
+      showLogin();
+    }
+
+    const message = data?.error || response.statusText || "خطا در ارتباط با سرویس.";
     const err = new Error(message);
     err.status = response.status;
+    err.code = code;
+    err.sessionInvalid = isRealSessionFailure;
     throw err;
   }
-  const type = response.headers.get("content-type") || "";
-  if (type.includes("application/json")) return response.json();
+
+  if (type.includes("application/json")) return data;
   return response;
 }
 
@@ -75,7 +84,15 @@ async function boot() {
         S.me = me.user;
         await enterApp();
         return;
-      } catch {}
+      } catch (e) {
+        if (!e.sessionInvalid) {
+          // خطاهای موقت GitHub/Worker/شبکه نباید Session سالم را پاک یا به‌عنوان انقضا نمایش دهند.
+          $("loginScreen").classList.remove("hidden");
+          $("loginError").textContent = `Session شما حفظ شده، اما سرویس موقتاً پاسخ صحیح نداد: ${e.message}`;
+          $("loginError").classList.remove("hidden");
+          return;
+        }
+      }
     }
     showLogin();
   } catch (e) {
