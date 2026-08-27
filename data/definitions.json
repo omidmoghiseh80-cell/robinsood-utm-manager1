@@ -366,6 +366,14 @@
       "status": "active",
       "createdBy": "owner",
       "createdAt": "2026-08-27T11:52:58.557Z"
+    },
+    {
+      "id": "MED-260827-115259-B1756593",
+      "displayName": "تبلیغات بنری",
+      "value": "display",
+      "status": "active",
+      "createdBy": "owner",
+      "createdAt": "2026-08-27T11:52:59.934Z"
     }
   ],
   "contentTypes": [
