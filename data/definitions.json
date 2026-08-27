@@ -220,6 +220,14 @@
       "status": "active",
       "createdBy": "owner",
       "createdAt": "2026-08-27T11:52:45.091Z"
+    },
+    {
+      "id": "SRC-260827-115246-2721543B",
+      "displayName": "ایکس (X)",
+      "value": "x",
+      "status": "active",
+      "createdBy": "owner",
+      "createdAt": "2026-08-27T11:52:46.589Z"
     }
   ],
   "mediums": [
