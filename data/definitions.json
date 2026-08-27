@@ -374,6 +374,14 @@
       "status": "active",
       "createdBy": "owner",
       "createdAt": "2026-08-27T11:52:59.934Z"
+    },
+    {
+      "id": "MED-260827-115301-AA9591A2",
+      "displayName": "تبلیغات عملکردی — CPR",
+      "value": "cpr",
+      "status": "active",
+      "createdBy": "owner",
+      "createdAt": "2026-08-27T11:53:01.370Z"
     }
   ],
   "contentTypes": [
