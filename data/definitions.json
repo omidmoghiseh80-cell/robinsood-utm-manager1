@@ -250,6 +250,14 @@
       "status": "active",
       "createdBy": "marketing",
       "createdAt": "2026-08-25T10:15:44.932Z"
+    },
+    {
+      "id": "MED-260827-085953-F9E1888A",
+      "displayName": "رفرال",
+      "value": "paid_referral",
+      "status": "active",
+      "createdBy": "owner",
+      "createdAt": "2026-08-27T08:59:53.340Z"
     }
   ],
   "contentTypes": [
