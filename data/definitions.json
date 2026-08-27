@@ -135,9 +135,11 @@
       "id": "SRC-YEKTANET",
       "displayName": "Yektanet",
       "value": "yektanet",
-      "status": "active",
+      "status": "deleted",
       "createdBy": "system",
-      "createdAt": "2026-08-19T00:00:00Z"
+      "createdAt": "2026-08-19T00:00:00Z",
+      "deletedAt": "2026-08-27T11:52:05.390Z",
+      "deletedBy": "owner"
     },
     {
       "id": "SRC-NAJVA",
