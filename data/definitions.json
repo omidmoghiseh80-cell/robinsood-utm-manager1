@@ -1,6 +1,21 @@
 {
   "schemaVersion": 1,
-  "campaigns": [],
+  "campaigns": [
+    {
+      "id": "CMP-260827-124023-89A94BB0",
+      "displayName": "کمپین ایمیل مارکتینگ",
+      "value": "fullfundpro_lead_aug26_shahrivar_1405",
+      "product": "fullfundpro",
+      "objective": "lead_aug26",
+      "period": "shahrivar",
+      "year": "1405",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "createdBy": "owner",
+      "createdAt": "2026-08-27T12:40:23.993Z"
+    }
+  ],
   "sources": [
     {
       "id": "SRC-TELEGRAM",
