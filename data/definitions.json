@@ -342,6 +342,14 @@
       "status": "active",
       "createdBy": "owner",
       "createdAt": "2026-08-27T08:59:53.340Z"
+    },
+    {
+      "id": "MED-260827-115255-F3CA1EA7",
+      "displayName": "سوشال — رسانه‌های خودمان",
+      "value": "owned_social",
+      "status": "active",
+      "createdBy": "owner",
+      "createdAt": "2026-08-27T11:52:55.489Z"
     }
   ],
   "contentTypes": [
