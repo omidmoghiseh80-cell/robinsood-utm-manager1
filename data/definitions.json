@@ -375,6 +375,17 @@
       "status": "active",
       "createdBy": "marketing",
       "createdAt": "2026-08-25T10:16:25.255Z"
+    },
+    {
+      "id": "CR-260827-090942-2D63B607",
+      "displayName": "لندینگ بعد از رونمایی فول فاند پرو",
+      "value": "banner_cr_260827_090942_2d63b607_v1",
+      "contentTypeId": "CT-BANNER",
+      "version": "v1",
+      "notes": "فایل لندینگ رو خانم دهقان داره",
+      "status": "active",
+      "createdBy": "owner",
+      "createdAt": "2026-08-27T09:09:42.013Z"
     }
   ],
   "audiences": []
