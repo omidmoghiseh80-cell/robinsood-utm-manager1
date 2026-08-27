@@ -244,6 +244,14 @@
       "status": "active",
       "createdBy": "owner",
       "createdAt": "2026-08-27T11:52:50.647Z"
+    },
+    {
+      "id": "SRC-260827-115252-8DADD5C2",
+      "displayName": "پیامک — یکتانت",
+      "value": "sms_yektanet",
+      "status": "active",
+      "createdBy": "owner",
+      "createdAt": "2026-08-27T11:52:52.390Z"
     }
   ],
   "mediums": [
