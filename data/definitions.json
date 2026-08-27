@@ -252,6 +252,14 @@
       "status": "active",
       "createdBy": "owner",
       "createdAt": "2026-08-27T11:52:52.390Z"
+    },
+    {
+      "id": "SRC-260827-115253-07D4CC15",
+      "displayName": "وب‌سایت رابین‌سود",
+      "value": "robinsood_com",
+      "status": "active",
+      "createdBy": "owner",
+      "createdAt": "2026-08-27T11:52:53.978Z"
     }
   ],
   "mediums": [
