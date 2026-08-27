@@ -81,9 +81,9 @@ Sourceهای اولیه:
 - `aparat` — آپارات
 - `x` — ایکس
 - `google` — گوگل
-- `mercury` — ایمیل / پنل Mercury
-- `najva` — پیامک / پنل نجوا
-- `yektanet` — پیامک / پنل یکتانت
+- `email_mercury` — ایمیل / پنل Mercury
+- `sms_najva` — پیامک / پنل نجوا
+- `sms_yektanet` — پیامک / پنل یکتانت
 - `robinsood.com` — وب‌سایت رابین‌سود
 
 Mediumهای اولیه:
@@ -97,7 +97,7 @@ Mediumهای اولیه:
 - `email` — ایمیل
 - `sms` — پیامک
 
-قاعده پیشنهادی: نام پنل ارسال در `utm_source` و نوع کانال در `utm_medium` ثبت می‌شود؛ مثال: `utm_source=mercury&utm_medium=email` یا `utm_source=najva&utm_medium=sms`.
+قاعده پیشنهادی: نام پنل ارسال در `utm_source` و نوع کانال در `utm_medium` ثبت می‌شود؛ مثال: `utm_source=email_mercury&utm_medium=email` یا `utm_source=sms_najva&utm_medium=sms`.
 
 ## پیش‌نیاز
 

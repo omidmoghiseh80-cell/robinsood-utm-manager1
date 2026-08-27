@@ -77,7 +77,7 @@
     {
       "id": "SRC-EMAIL-MERCURY",
       "displayName": "ایمیل — Mercury",
-      "value": "mercury",
+      "value": "email_mercury",
       "status": "active",
       "createdBy": "system",
       "createdAt": "2026-08-27T00:00:00Z"
@@ -85,7 +85,7 @@
     {
       "id": "SRC-SMS-NAJVA",
       "displayName": "پیامک — نجوا",
-      "value": "najva",
+      "value": "sms_najva",
       "status": "active",
       "createdBy": "system",
       "createdAt": "2026-08-27T00:00:00Z"
@@ -93,7 +93,7 @@
     {
       "id": "SRC-SMS-YEKTANET",
       "displayName": "پیامک — یکتانت",
-      "value": "yektanet",
+      "value": "sms_yektanet",
       "status": "active",
       "createdBy": "system",
       "createdAt": "2026-08-27T00:00:00Z"

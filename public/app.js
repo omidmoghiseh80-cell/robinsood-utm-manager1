@@ -257,7 +257,7 @@ function fillBuilder() {
 function smartMediumForSource() {
   const source = def("sources", $("source").value);
   if (!source) return;
-  const autoMap = {mercury:"email", najva:"sms", yektanet:"sms"};
+  const autoMap = {email_mercury:"email", sms_najva:"sms", sms_yektanet:"sms"};
   const mediumValue = autoMap[source.value];
   if (!mediumValue) return;
   const match = active("mediums").find(x => x.value === mediumValue);
