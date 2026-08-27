@@ -558,5 +558,45 @@
     "archivedBy": null,
     "deletedAt": null,
     "deletedBy": null
+  },
+  {
+    "id": "UTM-260827-090956-92F01974",
+    "campaign": {
+      "id": "CMP-260827-085606-E8BBADD6",
+      "displayName": "کمپین ایمیل مارکتینگ",
+      "value": "fullfundpro_lead_aug26_shahrivar_1405"
+    },
+    "source": {
+      "id": "SRC-260827-085808-58AE989F",
+      "displayName": "سایت نجوا",
+      "value": "site-https_app_cmercury_com"
+    },
+    "medium": {
+      "id": "MED-260827-085953-F9E1888A",
+      "displayName": "رفرال",
+      "value": "paid_referral"
+    },
+    "creative": {
+      "id": "CR-260827-090942-2D63B607",
+      "displayName": "لندینگ بعد از رونمایی فول فاند پرو",
+      "value": "banner_cr_260827_090942_2d63b607_v1"
+    },
+    "audience": null,
+    "destinationUrl": "https://www.robinsood.com/account/userlogin",
+    "finalUrl": "https://www.robinsood.com/account/userlogin?utm_source=site-https_app_cmercury_com&utm_medium=paid_referral&utm_campaign=fullfundpro_lead_aug26_shahrivar_1405&utm_content=banner_cr_260827_090942_2d63b607_v1",
+    "placement": "سایت نجوا برای ارسال ایمیل",
+    "publishDate": "2026-08-27",
+    "notes": "",
+    "createdBy": {
+      "username": "owner",
+      "name": "مدیر اصلی",
+      "role": "owner"
+    },
+    "createdAt": "2026-08-27T09:09:56.556Z",
+    "status": "active",
+    "archivedAt": null,
+    "archivedBy": null,
+    "deletedAt": null,
+    "deletedBy": null
   }
 ]
