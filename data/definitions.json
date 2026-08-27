@@ -212,6 +212,14 @@
       "status": "active",
       "createdBy": "owner",
       "createdAt": "2026-08-27T11:52:43.649Z"
+    },
+    {
+      "id": "SRC-260827-115245-CFDF4A32",
+      "displayName": "یوتیوب",
+      "value": "youtube",
+      "status": "active",
+      "createdBy": "owner",
+      "createdAt": "2026-08-27T11:52:45.091Z"
     }
   ],
   "mediums": [
