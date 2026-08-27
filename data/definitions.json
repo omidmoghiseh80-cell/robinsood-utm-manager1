@@ -173,9 +173,11 @@
       "id": "SRC-260825-101513-C38B013A",
       "displayName": "CHAVOSH",
       "value": "chavosh",
-      "status": "active",
+      "status": "deleted",
       "createdBy": "marketing",
-      "createdAt": "2026-08-25T10:15:13.819Z"
+      "createdAt": "2026-08-25T10:15:13.819Z",
+      "deletedAt": "2026-08-27T11:52:26.277Z",
+      "deletedBy": "owner"
     },
     {
       "id": "SRC-260827-085808-58AE989F",
