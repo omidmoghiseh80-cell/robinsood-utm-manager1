@@ -72,6 +72,20 @@
       "status": "active",
       "createdBy": "marketing",
       "createdAt": "2026-08-25T10:14:24.592Z"
+    },
+    {
+      "id": "CMP-260827-085606-E8BBADD6",
+      "displayName": "کمپین ایمیل مارکتینگ",
+      "value": "fullfundpro_lead_aug26_shahrivar_1405",
+      "product": "fullfundpro",
+      "objective": "lead_aug26",
+      "period": "shahrivar",
+      "year": "1405",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "createdBy": "owner",
+      "createdAt": "2026-08-27T08:56:06.570Z"
     }
   ],
   "sources": [
