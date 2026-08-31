@@ -287,6 +287,17 @@
       "status": "active",
       "createdBy": "owner",
       "createdAt": "2026-08-27T12:47:34.762Z"
+    },
+    {
+      "id": "CR-260831-191951-166E33F1",
+      "displayName": "لندینگ آموزشی پیامک نجوا لیدگیری فول فاند پرو",
+      "value": "landing_cr_260831_191951_166e33f1_v1",
+      "contentTypeId": "CT-260827-124724-E0E58232",
+      "version": "v1",
+      "notes": "",
+      "status": "active",
+      "createdBy": "marketing",
+      "createdAt": "2026-08-31T19:19:51.907Z"
     }
   ],
   "audiences": []
