@@ -638,5 +638,45 @@
     "archivedBy": null,
     "deletedAt": null,
     "deletedBy": null
+  },
+  {
+    "id": "UTM-260831-192118-35297D77",
+    "campaign": {
+      "id": "CMP-260831-191708-22583F97",
+      "displayName": "کمپین sms  مارکتنیگ افزایش لید فول فاند پرو شهریور",
+      "value": "fullfund_pro_najva_shahrivar_1405"
+    },
+    "source": {
+      "id": "SRC-SMS-NAJVA",
+      "displayName": "پیامک — نجوا",
+      "value": "sms_najva"
+    },
+    "medium": {
+      "id": "MED-SMS",
+      "displayName": "پیامک",
+      "value": "sms"
+    },
+    "creative": {
+      "id": "CR-260831-191951-166E33F1",
+      "displayName": "لندینگ آموزشی پیامک نجوا لیدگیری فول فاند پرو",
+      "value": "landing_cr_260831_191951_166e33f1_v1"
+    },
+    "audience": null,
+    "destinationUrl": "https://www.robinsood.com/account/userlogin",
+    "finalUrl": "https://www.robinsood.com/account/userlogin?utm_source=sms_najva&utm_medium=sms&utm_campaign=fullfund_pro_najva_shahrivar_1405&utm_content=landing_cr_260831_191951_166e33f1_v1",
+    "placement": "NAJVA _ YEKTANET",
+    "publishDate": "2026-09-02",
+    "notes": "",
+    "createdBy": {
+      "username": "marketing",
+      "name": "مسئول مارکتینگ",
+      "role": "marketing"
+    },
+    "createdAt": "2026-08-31T19:21:18.902Z",
+    "status": "active",
+    "archivedAt": null,
+    "archivedBy": null,
+    "deletedAt": null,
+    "deletedBy": null
   }
 ]
