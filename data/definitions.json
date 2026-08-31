@@ -14,6 +14,20 @@
       "status": "active",
       "createdBy": "owner",
       "createdAt": "2026-08-27T12:50:38.412Z"
+    },
+    {
+      "id": "CMP-260831-191708-22583F97",
+      "displayName": "کمپین sms  مارکتنیگ افزایش لید فول فاند پرو شهریور",
+      "value": "fullfund_pro_najva_shahrivar_1405",
+      "product": "fullfund_pro",
+      "objective": "najva",
+      "period": "shahrivar",
+      "year": "1405",
+      "startDate": "2026-09-02",
+      "endDate": "2026-09-30",
+      "status": "active",
+      "createdBy": "marketing",
+      "createdAt": "2026-08-31T19:17:08.742Z"
     }
   ],
   "sources": [
