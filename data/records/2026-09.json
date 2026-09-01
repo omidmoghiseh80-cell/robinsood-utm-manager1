@@ -78,5 +78,45 @@
     "archivedBy": null,
     "deletedAt": null,
     "deletedBy": null
+  },
+  {
+    "id": "UTM-260901-111033-45E08A6B",
+    "campaign": {
+      "id": "CMP-260831-200113-3FFD5992",
+      "displayName": "کمپین گزارش خبری عصر قلم",
+      "value": "robinsood_report_shahrivar_1405"
+    },
+    "source": {
+      "id": "SRC-260901-110419-8B76953F",
+      "displayName": "عصر قلم",
+      "value": "https_asreqalam_com"
+    },
+    "medium": {
+      "id": "MED-REFERRAL",
+      "displayName": "رفرال",
+      "value": "referral"
+    },
+    "creative": {
+      "id": "CR-260901-110923-EE09CA3B",
+      "displayName": "inner link",
+      "value": "text_cr_260901_110923_ee09ca3b_v1"
+    },
+    "audience": null,
+    "destinationUrl": "https://www.robinsood.com/faq",
+    "finalUrl": "https://www.robinsood.com/faq?utm_source=https_asreqalam_com&utm_medium=referral&utm_campaign=robinsood_report_shahrivar_1405&utm_content=text_cr_260901_110923_ee09ca3b_v1",
+    "placement": "5 عدد گزارش خبری عصر قلم",
+    "publishDate": "2026-09-01",
+    "notes": "",
+    "createdBy": {
+      "username": "marketing",
+      "name": "مسئول مارکتینگ",
+      "role": "marketing"
+    },
+    "createdAt": "2026-09-01T11:10:33.037Z",
+    "status": "active",
+    "archivedAt": null,
+    "archivedBy": null,
+    "deletedAt": null,
+    "deletedBy": null
   }
 ]
