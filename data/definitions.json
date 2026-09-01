@@ -42,6 +42,20 @@
       "status": "active",
       "createdBy": "marketing",
       "createdAt": "2026-08-31T20:01:13.184Z"
+    },
+    {
+      "id": "CMP-260901-085307-6BB54908",
+      "displayName": "کمپین تلگرام ادز",
+      "value": "fullfundpro_lead_generation_shahrivar_1405",
+      "product": "fullfundpro",
+      "objective": "lead_generation",
+      "period": "shahrivar",
+      "year": "1405",
+      "startDate": null,
+      "endDate": null,
+      "status": "active",
+      "createdBy": "owner",
+      "createdAt": "2026-09-01T08:53:07.985Z"
     }
   ],
   "sources": [
