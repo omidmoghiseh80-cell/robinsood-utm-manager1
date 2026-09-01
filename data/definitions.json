@@ -156,6 +156,14 @@
       "status": "active",
       "createdBy": "owner",
       "createdAt": "2026-08-27T12:50:23.679Z"
+    },
+    {
+      "id": "SRC-260901-061218-8C0A3122",
+      "displayName": "سایت نجوا پیامک",
+      "value": "site-https_www_najva_com",
+      "status": "active",
+      "createdBy": "owner",
+      "createdAt": "2026-09-01T06:12:18.813Z"
     }
   ],
   "mediums": [
