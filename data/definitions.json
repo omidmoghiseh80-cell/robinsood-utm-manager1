@@ -178,6 +178,14 @@
       "status": "active",
       "createdBy": "owner",
       "createdAt": "2026-09-01T06:12:18.813Z"
+    },
+    {
+      "id": "SRC-260901-110419-8B76953F",
+      "displayName": "عصر قلم",
+      "value": "https_asreqalam_com",
+      "status": "active",
+      "createdBy": "marketing",
+      "createdAt": "2026-09-01T11:04:19.167Z"
     }
   ],
   "mediums": [
