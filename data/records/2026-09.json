@@ -1,0 +1,42 @@
+[
+  {
+    "id": "UTM-260901-061312-E59AAE83",
+    "campaign": {
+      "id": "CMP-260831-191708-22583F97",
+      "displayName": "کمپین sms  مارکتنیگ افزایش لید فول فاند پرو شهریور",
+      "value": "fullfund_pro_najva_shahrivar_1405"
+    },
+    "source": {
+      "id": "SRC-260901-061218-8C0A3122",
+      "displayName": "سایت نجوا پیامک",
+      "value": "site-https_www_najva_com"
+    },
+    "medium": {
+      "id": "MED-SMS",
+      "displayName": "پیامک",
+      "value": "sms"
+    },
+    "creative": {
+      "id": "CR-260831-191951-166E33F1",
+      "displayName": "لندینگ آموزشی پیامک نجوا لیدگیری فول فاند پرو",
+      "value": "landing_cr_260831_191951_166e33f1_v1"
+    },
+    "audience": null,
+    "destinationUrl": "https://www.robinsood.com/faq",
+    "finalUrl": "https://www.robinsood.com/faq?utm_source=site-https_www_najva_com&utm_medium=sms&utm_campaign=fullfund_pro_najva_shahrivar_1405&utm_content=landing_cr_260831_191951_166e33f1_v1",
+    "placement": "",
+    "publishDate": "2026-09-01",
+    "notes": "",
+    "createdBy": {
+      "username": "owner",
+      "name": "مدیر اصلی",
+      "role": "owner"
+    },
+    "createdAt": "2026-09-01T06:13:12.719Z",
+    "status": "active",
+    "archivedAt": null,
+    "archivedBy": null,
+    "deletedAt": null,
+    "deletedBy": null
+  }
+]
