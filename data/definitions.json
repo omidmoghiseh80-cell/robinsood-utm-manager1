@@ -353,6 +353,17 @@
       "status": "active",
       "createdBy": "owner",
       "createdAt": "2026-09-01T08:54:39.488Z"
+    },
+    {
+      "id": "CR-260901-110923-EE09CA3B",
+      "displayName": "inner link",
+      "value": "text_cr_260901_110923_ee09ca3b_v1",
+      "contentTypeId": "CT-TEXT",
+      "version": "v1",
+      "notes": "",
+      "status": "active",
+      "createdBy": "marketing",
+      "createdAt": "2026-09-01T11:09:23.059Z"
     }
   ],
   "audiences": []
