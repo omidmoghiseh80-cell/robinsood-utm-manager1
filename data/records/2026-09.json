@@ -38,5 +38,45 @@
     "archivedBy": null,
     "deletedAt": null,
     "deletedBy": null
+  },
+  {
+    "id": "UTM-260901-085808-9F62A258",
+    "campaign": {
+      "id": "CMP-260901-085307-6BB54908",
+      "displayName": "کمپین تلگرام ادز",
+      "value": "fullfundpro_lead_generation_shahrivar_1405"
+    },
+    "source": {
+      "id": "SRC-TELEGRAM",
+      "displayName": "تلگرام",
+      "value": "telegram"
+    },
+    "medium": {
+      "id": "MED-PLATFORM-ADS",
+      "displayName": "سوشال رسمی / تبلیغات پلتفرمی",
+      "value": "platform_ads"
+    },
+    "creative": {
+      "id": "CR-260901-085439-FE513724",
+      "displayName": "لندینگ اصلی رابین سود نسخه 1",
+      "value": "landing_cr_260901_085439_fe513724_v1"
+    },
+    "audience": null,
+    "destinationUrl": "https://landing.robinsood.com/",
+    "finalUrl": "https://landing.robinsood.com/?utm_source=telegram&utm_medium=platform_ads&utm_campaign=fullfundpro_lead_generation_shahrivar_1405&utm_content=landing_cr_260901_085439_fe513724_v1",
+    "placement": "",
+    "publishDate": "2026-09-01",
+    "notes": "",
+    "createdBy": {
+      "username": "owner",
+      "name": "مدیر اصلی",
+      "role": "owner"
+    },
+    "createdAt": "2026-09-01T08:58:08.438Z",
+    "status": "active",
+    "archivedAt": null,
+    "archivedBy": null,
+    "deletedAt": null,
+    "deletedBy": null
   }
 ]
