@@ -198,5 +198,45 @@
     "archivedBy": null,
     "deletedAt": null,
     "deletedBy": null
+  },
+  {
+    "id": "UTM-260908-112751-C889CFF2",
+    "campaign": {
+      "id": "CMP-260908-111715-8FB3E495",
+      "displayName": "کمپین جذب فول فاند پرو شهریورماه",
+      "value": "fullfund_pro_iran_broker_topic_shahrivar_1405"
+    },
+    "source": {
+      "id": "SRC-260908-111906-EE7204A0",
+      "displayName": "کامیونیتی ایران بروکر",
+      "value": "https_forum_iranbroker_net"
+    },
+    "medium": {
+      "id": "MED-DISPLAY",
+      "displayName": "تبلیغات بنری",
+      "value": "display"
+    },
+    "creative": {
+      "id": "CR-260908-112705-05380120",
+      "displayName": "تاپیک ایران بروکر",
+      "value": "text_cr_260908_112705_05380120_v1"
+    },
+    "audience": null,
+    "destinationUrl": "https://pegah.robinsood.com/",
+    "finalUrl": "https://pegah.robinsood.com/?utm_source=https_forum_iranbroker_net&utm_medium=display&utm_campaign=fullfund_pro_iran_broker_topic_shahrivar_1405&utm_content=text_cr_260908_112705_05380120_v1",
+    "placement": "کامیونیتی ایران بروکر",
+    "publishDate": "2026-09-08",
+    "notes": "",
+    "createdBy": {
+      "username": "marketing",
+      "name": "مسئول مارکتینگ",
+      "role": "marketing"
+    },
+    "createdAt": "2026-09-08T11:27:51.066Z",
+    "status": "active",
+    "archivedAt": null,
+    "archivedBy": null,
+    "deletedAt": null,
+    "deletedBy": null
   }
 ]
