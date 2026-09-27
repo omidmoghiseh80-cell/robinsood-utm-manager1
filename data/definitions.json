@@ -84,6 +84,20 @@
       "status": "active",
       "createdBy": "marketing",
       "createdAt": "2026-09-27T06:49:18.063Z"
+    },
+    {
+      "id": "CMP-260927-080312-EDECD02E",
+      "displayName": "کمپین فروش چالش با رونمایی دیجی پی و ریدیزاین سامانه پگاه",
+      "value": "digipay_panel_digipay_panel_mehr_1405",
+      "product": "digipay_panel",
+      "objective": "digipay_panel",
+      "period": "mehr",
+      "year": "1405",
+      "startDate": "2026-09-27",
+      "endDate": null,
+      "status": "active",
+      "createdBy": "marketing",
+      "createdAt": "2026-09-27T08:03:12.494Z"
     }
   ],
   "sources": [
