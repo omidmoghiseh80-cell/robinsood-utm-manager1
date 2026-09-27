@@ -411,6 +411,17 @@
       "status": "active",
       "createdBy": "marketing",
       "createdAt": "2026-09-08T11:27:05.740Z"
+    },
+    {
+      "id": "CR-260927-080156-0BC8A7B3",
+      "displayName": "لندینگ ایمیل مارکتینگ",
+      "value": "landing_cr_260927_080156_0bc8a7b3_v1",
+      "contentTypeId": "CT-260827-124724-E0E58232",
+      "version": "v1",
+      "notes": "",
+      "status": "active",
+      "createdBy": "marketing",
+      "createdAt": "2026-09-27T08:01:56.275Z"
     }
   ],
   "audiences": []
