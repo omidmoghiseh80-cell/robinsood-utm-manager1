@@ -238,5 +238,45 @@
     "archivedBy": null,
     "deletedAt": null,
     "deletedBy": null
+  },
+  {
+    "id": "UTM-260927-065151-3E19E7D0",
+    "campaign": {
+      "id": "CMP-260927-064918-6984E827",
+      "displayName": "تلگرام ادز با شروع دیجی پی",
+      "value": "digipay_digipay_panel_mehr_1405"
+    },
+    "source": {
+      "id": "SRC-TELEGRAM",
+      "displayName": "تلگرام",
+      "value": "telegram"
+    },
+    "medium": {
+      "id": "MED-OWNED-SOCIAL",
+      "displayName": "سوشال — رسانه‌های خودمان",
+      "value": "owned_social"
+    },
+    "creative": {
+      "id": "CR-260901-110923-EE09CA3B",
+      "displayName": "inner link",
+      "value": "text_cr_260901_110923_ee09ca3b_v1"
+    },
+    "audience": null,
+    "destinationUrl": "https://pegah.robinsood.com/",
+    "finalUrl": "https://pegah.robinsood.com/?utm_source=telegram&utm_medium=owned_social&utm_campaign=digipay_digipay_panel_mehr_1405&utm_content=text_cr_260901_110923_ee09ca3b_v1",
+    "placement": "کانال شبکه‌های اجتماعی رابین‌سود",
+    "publishDate": "2026-09-27",
+    "notes": "",
+    "createdBy": {
+      "username": "marketing",
+      "name": "مسئول مارکتینگ",
+      "role": "marketing"
+    },
+    "createdAt": "2026-09-27T06:51:51.962Z",
+    "status": "active",
+    "archivedAt": null,
+    "archivedBy": null,
+    "deletedAt": null,
+    "deletedBy": null
   }
 ]
