@@ -278,5 +278,45 @@
     "archivedBy": null,
     "deletedAt": null,
     "deletedBy": null
+  },
+  {
+    "id": "UTM-260927-080346-D2D6D1D7",
+    "campaign": {
+      "id": "CMP-260927-080312-EDECD02E",
+      "displayName": "کمپین فروش چالش با رونمایی دیجی پی و ریدیزاین سامانه پگاه",
+      "value": "digipay_panel_digipay_panel_mehr_1405"
+    },
+    "source": {
+      "id": "SRC-EMAIL-MERCURY",
+      "displayName": "ایمیل — Mercury",
+      "value": "email_mercury"
+    },
+    "medium": {
+      "id": "MED-EMAIL",
+      "displayName": "ایمیل",
+      "value": "email"
+    },
+    "creative": {
+      "id": "CR-260927-080156-0BC8A7B3",
+      "displayName": "لندینگ ایمیل مارکتینگ",
+      "value": "landing_cr_260927_080156_0bc8a7b3_v1"
+    },
+    "audience": null,
+    "destinationUrl": "https://pegah.robinsood.com/",
+    "finalUrl": "https://pegah.robinsood.com/?utm_source=email_mercury&utm_medium=email&utm_campaign=digipay_panel_digipay_panel_mehr_1405&utm_content=landing_cr_260927_080156_0bc8a7b3_v1",
+    "placement": "ایمیل کاربران خودمان در مرکوری نجوا",
+    "publishDate": "2026-09-27",
+    "notes": "",
+    "createdBy": {
+      "username": "marketing",
+      "name": "مسئول مارکتینگ",
+      "role": "marketing"
+    },
+    "createdAt": "2026-09-27T08:03:46.717Z",
+    "status": "active",
+    "archivedAt": null,
+    "archivedBy": null,
+    "deletedAt": null,
+    "deletedBy": null
   }
 ]
