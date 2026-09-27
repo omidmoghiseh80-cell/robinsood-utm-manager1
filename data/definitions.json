@@ -70,6 +70,20 @@
       "status": "active",
       "createdBy": "marketing",
       "createdAt": "2026-09-08T11:17:15.518Z"
+    },
+    {
+      "id": "CMP-260927-064918-6984E827",
+      "displayName": "تلگرام ادز با شروع دیجی پی",
+      "value": "digipay_digipay_panel_mehr_1405",
+      "product": "digipay",
+      "objective": "digipay_panel",
+      "period": "mehr",
+      "year": "1405",
+      "startDate": "2026-09-27",
+      "endDate": null,
+      "status": "active",
+      "createdBy": "marketing",
+      "createdAt": "2026-09-27T06:49:18.063Z"
     }
   ],
   "sources": [
